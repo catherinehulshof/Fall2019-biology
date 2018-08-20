@@ -9,16 +9,16 @@ kramdown:
 permalink:        pretty
 
 # Setup
-title:            Data Carpentry for Biologists
-description:      'Teaching the tools to get computers to do cool science'
-url:              http://www.datacarpentry.org/semester-biology
-baseurl:          /semester-biology
-email:            datacarpentrysemester@weecology.org
-feedbackurl:      https://docs.google.com/forms/d/e/1FAIpQLSdV_polFmoukgjcs1IC0Dd4iO1rdgwFnOds28xC_ma_z4tNIw
+title:            Data Science for Biologists
+description:      'Preparing Biologists for the Data Era'
+url:              https://github.com/catherinehulshof/Fall2018-biology
+baseurl:          /Fall2018-biology
+email:            catherine.hulshofe@gmail.com
+feedbackurl:      
 author:
-  name:           'Ethan White'
-  url:            https://twitter.com/ethanwhite
+  name:           'Dr. Catherine Hulshof'
+  url:            https://catherinehulshof.wordpress.com/
 
 github:
-  repo:           https://github.com/datacarpentry/semester-biology
+  repo:           https://github.com/catherinehulshof/Fall2018-biology
   #               Be sure the 'Issues' feature is activated in 'Settings'
