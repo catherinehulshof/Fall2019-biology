@@ -7,7 +7,6 @@ title: Course Introduction
 ### Welcome
 
 * Introduce yourself
-* Introduce co-instructors/TAs
 * Depending on class size have students introduce themselves
 
 ### Course goals
@@ -38,12 +37,17 @@ title: Course Introduction
     * Work on exercises in class
 	* Will require additional programming time after class
 	* Due end of the day on Monday
-	* 75% of grade
+	* 65% of grade
 
 * Projects
     * Designed to let you learn about bigger computing efforts
 	* Ideally related to your research
-	* Can related to any aspect of the class or involve many of them
+	* Can be related to any aspect of the class or involve many of them
+
+* Topic Lectures
+    * Designed to practice instruction techniques
+    * Ideally related to a tool you will use in your research
+    * Should include worked examples (I do, we do, you do)
 
 ### Website
 
@@ -70,13 +74,7 @@ title: Course Introduction
 
 ### Office Hours
 
-* Monday: 2-3:15 in NZ 203
-* Wednesday: 11 in NZ 203
-
-### Canvas
-
-* Handle assignment submission and grading through Canvas
-* Chat
+* Thursdays 1 - 2 in LFSCB 349
 
 ### First day demo
 
