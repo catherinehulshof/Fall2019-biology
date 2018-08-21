@@ -1,19 +1,16 @@
 ---
 layout: page
 title: Syllabus
-catalog: WIS 6934
+catalog: BIOL 691
 credits: 3
 semester: Fall 2018
-professor: Dr. Ethan White
-office: Room 1 in Building 150 (just north of Newins-Zeigler)
-email: ethanwhite@ufl.edu
-phone: 352-294-2081
-schedule: ['Tuesdays, 12:50-1:40', 'Fridays, 11:45-1:40']
-location: 219 Newins-Ziegler Hall
-office_hours: Monday 2-3:15
-office_hours_location: Newins-Zeigler 203
-TA: Andrew Marx
-TA_email: andrewjmarx@ufl.edu
+professor: Dr. Catherine Hulshof
+office: LFSCB 0349
+email: cmhulshof@vcu.edu
+schedule: [Thursdays 3:30 - 6:20]
+location: LFSCB 0235
+office_hours: Friday 1:00 - 2:00
+office_hours_location: LFSCB 0349
 ---
 
 ## {{ site.title }}
@@ -28,8 +25,6 @@ Office: {{ page.office }}
 
 Email (best way to contact us):
 [{{ page.email }}](mailto:{{ page.email }})
-
-Phone: {{ page.phone }}
 
 
 ### Location
@@ -51,15 +46,8 @@ Times: {{ page.office_hours }}
 Location: {{ page.office_hours_location }}
 
 Or by appointment. *Note: my schedule gets very busy during the semester so
-please try to schedule appointments as far in advance as possible. In general it
+please try to schedule appointments in advance. In general it
 will be very difficult to set up appointments less than 24 hours in advance.*
-
-
-### Course TA
-
-{{ page.TA }}
-
-Email: [{{ page.TA_email }}](mailto:{{ page.TA_email }})
 
 
 ### Website
@@ -123,16 +111,6 @@ Students completing this course will be able to:
   languages and database management systems
 
 
-### How this course relates to the Student Learning Outcomes in Wildlife Ecology and Conservation
-
-This course contributes to the 'Quantitative Skills' and 'Conducting and
-Analyzing Independent/Original Research' Student Learning Outcomes specified in
-the
-[Ph.D. and MS in Wildlife Ecology and Conservation Academic Assessment Plans](http://assessment.aa.ufl.edu/Data/Sites/22/media/2013-14gaap/cals/2013-14-cals-wildlife-ecol-and-consvn-phd-aap.pdf),
-by providing students the skills and knowledge they need to manage and analyze
-the data used in research.
-
-
 ### Teaching Philosophy
 
 This class is taught using a flipped, learner-centered, approach, because
@@ -183,8 +161,8 @@ if you fall behind. Reasonable requests for longer extensions will also be grant
 
 ### Assignment policy
 
-Assignments are due Monday night by 11:59 pm Eastern Time. Assignments should be
-submitted via Canvas. This allows you to be finished with one week's material
+Assignments are due Wednesday night by 11:59 pm Eastern Time. Assignments should be
+submitted via Blackboard. This allows you to be finished with one week's material
 before starting the next week's material.
 
 
@@ -198,7 +176,7 @@ please contact the instructor and they will do their best to provide you with
 one.
 
 
-## UF Policies
+## VCU Policies
 
 
 ### University Policy on Accommodating Students with Disabilities
