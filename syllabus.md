@@ -23,12 +23,12 @@ office_hours_location: LFSCB 349
 
 Office: {{ page.office }}
 
-Email (best way to contact):
+Email:
 [{{ page.email }}](mailto:{{ page.email }})
 
 ### Location
 
-{{location}}
+{{ location }}
 
 ### Times
 
@@ -42,7 +42,9 @@ Times: {{ page.office_hours }}
 
 Location: {{ page.office_hours_location }}
 
-Or by appointment. *Note: my schedule gets very busy during the semester so
+Or by appointment.
+
+*Note: my schedule gets very busy during the semester so
 please try to schedule appointments in advance. In general it
 will be very difficult to set up appointments less than 24 hours in advance.*
 
@@ -172,7 +174,7 @@ one.
 
 ## VCU Policies
 
-Students should visit http://go.vcu.edu/syllabus and review all syllabus statement information. The full university syllabus statement includes information on safety, registration, the VCU Honor Code, student conduct, withdrawal and more.
+Students should visit (http://go.vcu.edu/syllabus) and review all syllabus statement information. The full university syllabus statement includes information on safety, registration, the VCU Honor Code, student conduct, withdrawal and more.
 
 **Most importantly, if you are struggling for any reason please come talk to me
 and I will do my best to help.**
@@ -180,7 +182,9 @@ and I will do my best to help.**
 
 ## Grading Policies
 
-Grading for this course is based on 10 equally weighted assignments. One problem
+Grading for this course is based on 10 equally weighted assignments (65%), 1 independent project (20%), and 1 topic instruction (15%).
+
+One problem
 from each assignment (selected at the instructors discretion after the
 assignments have been submitted) will receive a thorough code review and a
 detailed grade. Other problems will be graded as follows:
@@ -195,19 +199,15 @@ detailed grade. Other problems will be graded as follows:
 Independent projects may focus on databases, programming, or a combination or
 the two.
 
+Topic instruction may focus on a core topic listed in the syllabus or another topic of interest.
+
 ### Grading scale
 
-- **A 93-100**
-- **A- 90-92**
-- **B+ 87-89**
-- **B 83-86**
-- **B- 80-82**
-- **C+ 77-79**
-- **C 73-76**
-- **C- 70-72**
-- **D+ 67-69**
-- **D 60-66**
-- **E <60**
+- **A 90-100**
+- **B 80-89**
+- **C 70-79**
+- **D 60-69**
+- **F <60**
 
 
 ## Course Schedule

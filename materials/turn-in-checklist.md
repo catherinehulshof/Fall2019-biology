@@ -3,8 +3,6 @@ layout: page
 title: Assignment Submission & Checklist
 ---
 
-- All assignments should be submitted through [Canvas](http://ufl.instructure.com/)
-
 - What files to submit: 
     - **Week 1** - one text file (such as a Word doc), one .xlsx file, one .sqlite file containing three tables
     - **Week 2** - one .sqlite file containing 16 saved SQL views
