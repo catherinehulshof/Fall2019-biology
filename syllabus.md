@@ -28,7 +28,7 @@ Email:
 
 ### Location
 
-{{ page.location }}
+LFSCB 235
 
 ### Times
 
