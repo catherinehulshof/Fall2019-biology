@@ -1,19 +1,16 @@
 ---
 layout: page
 title: Syllabus
-catalog: WIS 6934
+catalog: BIOL 691
 credits: 3
 semester: Fall 2018
-professor: Dr. Ethan White
-office: Room 1 in Building 150 (just north of Newins-Zeigler)
-email: ethanwhite@ufl.edu
-phone: 352-294-2081
-schedule: ['Tuesdays, 12:50-1:40', 'Fridays, 11:45-1:40']
-location: 219 Newins-Ziegler Hall
-office_hours: Monday 2-3:15
-office_hours_location: Newins-Zeigler 203
-TA: Andrew Marx
-TA_email: andrewjmarx@ufl.edu
+professor: Dr. Catherine Hulshof
+office: LFSCB 349
+email: cmhulshof@vcu.edu
+schedule: ['Wednesdays, 3:00 - 6:20']
+location: LFSCB
+office_hours: Thursdays 1:00 - 2:00
+office_hours_location: LFSCB 349
 ---
 
 ## {{ site.title }}
