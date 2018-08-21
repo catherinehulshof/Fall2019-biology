@@ -57,6 +57,7 @@ will be very difficult to set up appointments less than 24 hours in advance.*
 {{ page.TA }}
 
 Email: [{{ page.TA_email }}](mailto:{{ page.TA_email }})
+please try to schedule appointments in advance. In general it will be very difficult to set up appointments less than 24 hours in advance.*
 
 
 ### Website
@@ -182,6 +183,8 @@ if you fall behind. Reasonable requests for longer extensions will also be grant
 
 Assignments are due Monday night by 11:59 pm Eastern Time. Assignments should be
 submitted via Canvas. This allows you to be finished with one week's material
+Assignments are due Wednesday night by 11:59 pm Eastern Time. Assignments should be
+submitted via Blackboard. This allows you to be finished with one week's material
 before starting the next week's material.
 
 
@@ -196,6 +199,7 @@ one.
 
 
 ## UF Policies
+## VCU Policies
 
 
 ### University Policy on Accommodating Students with Disabilities
