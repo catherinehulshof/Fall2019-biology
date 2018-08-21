@@ -174,7 +174,7 @@ one.
 
 ## VCU Policies
 
-Students should visit (http://go.vcu.edu/syllabus) and review all syllabus statement information. The full university syllabus statement includes information on safety, registration, the VCU Honor Code, student conduct, withdrawal and more.
+Students should visit [http://go.vcu.edu/syllabus](http://go.vcu.edu/syllabus) and review all syllabus statement information. The full university syllabus statement includes information on safety, registration, the VCU Honor Code, student conduct, withdrawal and more.
 
 **Most importantly, if you are struggling for any reason please come talk to me
 and I will do my best to help.**
