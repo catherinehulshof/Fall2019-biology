@@ -28,7 +28,7 @@ Email:
 
 ### Location
 
-{{ location }}
+{{ page.location }}
 
 ### Times
 
