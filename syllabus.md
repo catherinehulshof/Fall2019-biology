@@ -3,20 +3,16 @@ layout: page
 title: Syllabus
 catalog: WIS 6934
 credits: 3
-semester: Fall 2017
-professor: Dr. Ethan White and Kristina Riemer
-office: Room 1 in Building 150 (just north of Newins-Zeigler)
-email: ethanwhite@ufl.edu
-phone: 352-294-2081
-schedule: ['Tuesdays, 4:05-4:55, 222 Newins-Ziegler Hall',
-           'Fridays, 11:45-1:40, 219 Newins-Ziegler Hall']
-office_hours: Monday 2-3:15 and Wednesday 11-12
-office_hours_location: Newins-Zeigler 203
-TA: Andrew Marx
-TA_email: andrewjmarx@ufl.edu
+semester: Fall 2018
+professor: Dr. Catherine Hulshof
+office: LFSCB 349
+email: cmhulshof@vcu.edu
+schedule: ['Wednesdays 3:30 - 6:20']
+office_hours: Thursday 1 - 2
+office_hours_location: LFSCB 349
 ---
 
-## {{ site.title }} 
+## {{ site.title }}
 
 {{ page.catalog }}, {{ page.credits }} Credits, {{ page.semester }}
 
@@ -26,15 +22,11 @@ TA_email: andrewjmarx@ufl.edu
 
 Office: {{ page.office }}
 
-Email (best way to contact us):
-[{{ page.email }}](mailto:{{ page.email }}), [kristina.riemer@ufl.edu](mailto:kristina.riemer@ufl.edu)
-
-Phone: {{ page.phone }}
+Email (best way to contact):
+[{{ page.email }}](mailto:{{ page.email }})
 
 
 ### Times & Location
-
-**Note: class is in different locations depending on the day of the week**
 
 {% for class in page.schedule %}
   {{ class }}
@@ -48,15 +40,8 @@ Times: {{ page.office_hours }}
 Location: {{ page.office_hours_location }}
 
 Or by appointment. *Note: my schedule gets very busy during the semester so
-please try to schedule appointments as far in advance as possible. In general it
+please try to schedule appointments in advance. In general it
 will be very difficult to set up appointments less than 24 hours in advance.*
-
-
-### Course TA
-
-{{ page.TA }}
-
-Email: [{{ page.TA_email }}](mailto:{{ page.TA_email }})
 
 
 ### Website
@@ -78,7 +63,7 @@ There is no required text book for this class.
 
 
 ### Course Description
- 
+
 Computers are increasingly essential to the study of all aspects of
 biology. Data management skills are needed for entering data without errors,
 storing it in a usable way, and extracting key aspects of the data for
@@ -130,16 +115,6 @@ As a rough guideline projects should represent ~30-40 hours of work. Some class
 time will be provided for working on projects.
 
 Get more details about the project from the [Projects Introduction]({{ site.baseurl}}/materials/projects).
-
-### How this course relates to the Student Learning Outcomes in Wildlife Ecology and Conservation
-
-This course contributes to the 'Quantitative Skills' and 'Conducting and
-Analyzing Independent/Original Research' Student Learning Outcomes specified in
-the
-[Ph.D. and MS in Wildlife Ecology and Conservation Academic Assessment Plans](http://assessment.aa.ufl.edu/Data/Sites/22/media/2013-14gaap/cals/2013-14-cals-wildlife-ecol-and-consvn-phd-aap.pdf),
-by providing students the skills and knowledge they need to manage and analyze
-the data used in research.
-
 
 ### Teaching Philosophy
 
@@ -198,9 +173,7 @@ quickly.
 
 ### Assignment policy
 
-Assignments are due Monday night by 11:59 pm Eastern Time. Assignments should be
-submitted via Canvas.
-
+Assignments are due Tuesday night by 11:59 pm Eastern Time.
 
 ### Course Technology
 
@@ -212,68 +185,18 @@ please contact the instructor and they will do their best to provide you with
 one.
 
 
-## UF Policies
+## VCU Policies
 
+Students should visit http://go.vcu.edu/syllabus and review all syllabus statement information. The full university syllabus statement includes information on safety, registration, the VCU Honor Code, student conduct, withdrawal and more.
 
-### University Policy on Accommodating Students with Disabilities
-
-Students requesting accommodation for disabilities must first register with the
-Dean of Students Office (http://www.dso.ufl.edu/drc/). The Dean of Students
-Office will provide documentation to the student who must then provide this
-documentation to the instructor when requesting accommodation. You must submit
-this documentation prior to submitting assignments or taking the quizzes or
-exams. Accommodations are not retroactive, therefore, students should contact
-the office as soon as possible in the term for which they are seeking
-accommodations.
-
-
-### University Policy on Academic Misconduct
-
-Academic honesty and integrity are fundamental values of the University
-community. Students should be sure that they understand the UF Student Honor
-Code at http://www.dso.ufl.edu/students.php.
-
-
-### Netiquette and Communication Courtesy
-
-All members of the class are expected to follow rules of common
-courtesy in all email messages, threaded discussions and chats.
-
-
-## Getting Help
-
-For issues with technical difficulties for E-learning in Canvas, please contact the UF Help Desk at:
-
-* Learning-support@ufl.edu 
-* (352) 392-HELP - select option 2
-* https://lss.at.ufl.edu/help.shtml 
-
-Any requests for make-ups due to technical issues MUST be accompanied by the
-ticket number received from LSS when the problem was reported to them. The
-ticket number will document the time and date of the problem. You MUST e-mail
-your instructor within 24 hours of the technical difficulty if you wish to
-request a make-up.
-
-Other resources are available at http://www.distance.ufl.edu/getting-help for:
-
-* Counseling and Wellness resources
-* Disability resources
-* Resources for handling student concerns and complaints
-* Library Help Desk support
-
-Should you have any complaints with your experience in this course please visit
-http://www.distance.ufl.edu/student-complaints to submit a complaint.
-
-**Most importantly, if you are struggling for any reason please come talk to me
-and I will do my best to help.**
+**Most importantly, if you are struggling for any reason please come talk to me and I will do my best to help.**
 
 
 ## Grading Policies
 
-Grading for this course will revolve around a combination of assignments (75%)
-and an independent project (25%).
+Grading for this course will revolve around a combination of assignments (60%), an independent project (25%), and a lecture (15%).
 
-There will be 11 equally weighted assignments. One problem from each assignment
+There will be 10 equally weighted assignments. One problem from each assignment
 (selected at the instructors discretion after the assignments have been
 submitted) will receive a thorough code review and a detailed grade. Other
 problems will be graded as follows:
