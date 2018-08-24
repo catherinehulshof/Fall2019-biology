@@ -2,9 +2,8 @@
 layout: page
 title: Assignment Schedule
 assignments: ['Data Entry and Storage', 'Introduction to R and RStudio',
-'Working with Data', 'Data Visualization', 'Working with Spatial Data', 'Project
-Organization and Style', 'Programming Fundamentals 1', 'Programming Fundamentals
-2', 'Knitr', 'Working with Databases', 'Student
+'Working with Data', 'Data Visualization', 'Working with Spatial Data', 'Programming Fundamentals 1', 'Programming Fundamentals
+2', 'Knitr', 'Working with Databases', 'The Carpentries Instructional Techniques', 'Student
 Chosen Topic', 'Student Chosen Topic', 'Student Chosen Topic', 'Student Chosen Topic', 'Student Chosen Topic', 'Student Chosen Topic' ]
 ---
 
