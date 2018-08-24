@@ -36,18 +36,14 @@ title: Course Introduction
     * Practice is really important for learning skills like this
     * Work on exercises in class
 	* Will require additional programming time after class
-	* Due end of the day on Monday
-	* 65% of grade
-
-* Projects
-    * Designed to let you learn about bigger computing efforts
-	* Ideally related to your research
-	* Can be related to any aspect of the class or involve many of them
+	* Due end of the day on Tuesday
+	* 75% of grade
 
 * Topic Lectures
     * Designed to practice instruction techniques
     * Ideally related to a tool you will use in your research
-    * Should include worked examples (I do, we do, you do)
+    * Should include worked examples and assignment (I do, we do, you do)
+    * 25% of grade (grading rubric will be provided ahead of time during class)
 
 ### Website
 

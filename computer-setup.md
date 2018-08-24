@@ -3,8 +3,7 @@ layout: page
 title: Computer Setup
 ---
 
-***BIOL 691 students will need their own laptops set up with SQL by the start of
-classes, R by week 2, and Git by week 8.***
+***BIOL 691 students will need their own laptops set up with SQL by week 1, R by week 2, and Git by week 8.***
 
 ### SQL
 

@@ -182,7 +182,7 @@ and I will do my best to help.**
 
 ## Grading Policies
 
-Grading for this course is based on 10 equally weighted assignments (65%), 1 independent project (20%), and 1 topic instruction (15%).
+Grading for this course is based on 10 equally weighted assignments (75%), and 1 topic instruction (25%).
 
 One problem
 from each assignment (selected at the instructors discretion after the
@@ -195,9 +195,6 @@ detailed grade. Other problems will be graded as follows:
 * Attempts to solve the problem and makes some progress using the core concept:
     50%
 * Answer demonstrates a lack of understanding of the core concept: 0%
-
-Independent projects may focus on databases, programming, or a combination or
-the two.
 
 Topic instruction may focus on a core topic listed in the syllabus or another topic of interest.
 
