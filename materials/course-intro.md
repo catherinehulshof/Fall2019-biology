@@ -36,7 +36,7 @@ title: Course Introduction
     * Practice is really important for learning skills like this
     * Work on exercises in class
 	* Will require additional programming time after class
-	* Due end of the day on Tuesday
+	* Due end of the day on Tuesday via Blackboard
 	* 75% of grade
 
 * Topic Lectures

@@ -159,7 +159,7 @@ if you fall behind. Reasonable requests for longer extensions will also be grant
 
 ### Assignment policy
 
-Assignments are due Tuesday night by 11:59 pm Eastern Time. This allows you to be finished with one week's material before starting the next week's material.
+Assignments are due Tuesday night by 11:59 pm Eastern Time. This allows you to be finished with one week's material before starting the next week's material. Submit materials through our Blackboard course site.
 
 
 ### Course Technology

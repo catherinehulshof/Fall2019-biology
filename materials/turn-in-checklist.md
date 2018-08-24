@@ -8,6 +8,7 @@ title: Assignment Submission & Checklist
     - **Week 2-9** - a zip file containing one .R file & any data files needed to run it
     - **Student chosen topics** - a zip file containing one .R file & any data files needed to run it
 - To create zip, put all files into single folder, right click folder, and select compress option
+- Submit folder through Blackboard
 
 
 # Code Checklist
