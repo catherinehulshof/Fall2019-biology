@@ -3,7 +3,7 @@ layout: page
 title: Computer Setup
 ---
 
-***BIOL 691 students will need their own laptops set up with SQL by week 1, R by week 2, and Git by week 8.***
+***BIOL 691 students will need their own laptops set up with SQL by week 1, R by week 2.***
 
 ### SQL
 
@@ -13,7 +13,9 @@ Download and install [Mozilla Firefox](https://www.mozilla.org/en-US/firefox/new
 
 Download and install the [R base system](http://cran.rstudio.com/). I recommend you use the [R studio](http://www.rstudio.com/products/rstudio/download/) to work with the base system.
 
-### Git **NOTE** Depending on our schedule we may or may not cover Git
+### Git
+
+*NOTE Depending on our schedule we may or may not cover Git*
 
 #### Windows
 
@@ -66,7 +68,7 @@ install git`.
 
 ### Python
 
-*Python installation is not required for WIS 6934. Python materials on this site
+*Python installation is not required for BIOL 691. Python materials on this site
 are no longer under active development.*
 
 Download and install the
