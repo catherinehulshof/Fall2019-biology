@@ -13,7 +13,7 @@ Download and install [Mozilla Firefox](https://www.mozilla.org/en-US/firefox/new
 
 Download and install the [R base system](http://cran.rstudio.com/). I recommend you use the [R studio](http://www.rstudio.com/products/rstudio/download/) to work with the base system.
 
-### Git
+### Git **NOTE** Depending on our schedule we may or may not cover Git
 
 #### Windows
 

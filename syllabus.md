@@ -7,7 +7,7 @@ semester: Fall 2018
 professor: Dr. Catherine Hulshof
 office: LFSCB 349
 email: cmhulshof@vcu.edu
-schedule: ['Wednesdays, 3:00 - 6:20']
+schedule: ['Wednesdays, 3:30 - 6:20']
 location: LFSCB 235
 office_hours: Thursdays 1:00 - 2:00
 office_hours_location: LFSCB 349
@@ -21,12 +21,10 @@ office_hours_location: LFSCB 349
 
 {{ page.professor }}
 
-Office: {{ page.office }}
-
 Email:
 [{{ page.email }}](mailto:{{ page.email }})
 
-### Location
+### Class Location
 
 LFSCB 235
 
@@ -59,6 +57,8 @@ periodically for updates.
 ### Course Communications
 
 Email: [{{ page.email }}](mailto:{{ page.email }})
+
+We will also use Blackboard to submit assignments and for other course announcements and communications. 
 
 
 ### Required Texts
