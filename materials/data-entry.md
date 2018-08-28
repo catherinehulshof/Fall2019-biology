@@ -20,7 +20,7 @@ protection against bad data being entered
 > Show posts/papers on dates and gene names
 >
 > * [https://genomebiology.biomedcentral.com/articles/10.1186/s13059-016-1044-7](https://genomebiology.biomedcentral.com/articles/10.1186/s13059-016-1044-7)
-> * [https://datapub.cdlib.org/2014/04/10/abandon-all-hope-ye-who-enter-dates-in-excel/](https://datapub.cdlib.org/2014/04/10/abandon-all-hope-ye-who-enter-dates-in-excel/)
+> * [https://uc3.cdlib.org/2014/04/09/abandon-all-hope-ye-who-enter-dates-in-excel/](https://uc3.cdlib.org/2014/04/09/abandon-all-hope-ye-who-enter-dates-in-excel/)
 
 ### Quality Assurance
 
@@ -31,7 +31,7 @@ protection against bad data being entered
 * `Data -> Data Validation`
 * Choose the data type: `Whole numbers` (only that type can be entered)
 * Set limitations
-    * Use `Data` to set the type of limitation: `between` 
+    * Use `Data` to set the type of limitation: `between`
     * Then use additional boxes to provide specifics: `1` and `10`
 * Add a message to explain what goes in a cell in `Input Message`
 * Add a useful error message using `Error Alert`

@@ -4,7 +4,7 @@ title: Assignment Submission & Checklist
 ---
 
 - What files to submit:
-    - **Week 1** - one text file (such as a Word doc), one .xlsx file, one .sqlite file containing three tables
+    - **Week 1** - one text file (such as a Word doc), and one .xlsx file
     - **Week 2-9** - a zip file containing one .R file & any data files needed to run it
     - **Student chosen topics** - a zip file containing one .R file & any data files needed to run it
 - To create zip, put all files into single folder, right click folder, and select compress option
