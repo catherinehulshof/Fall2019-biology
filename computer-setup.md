@@ -5,6 +5,10 @@ title: Computer Setup
 
 ***BIOL 691 students will need their own laptops set up with R by week 2.***
 
+### OpenRefine
+
+Download and install [OpenRefine](http://openrefine.org/download.html). 
+
 <!--### SQL
 
 Download and install [Mozilla Firefox](https://www.mozilla.org/en-US/firefox/new/). Add the [SQLite Manager](https://addons.mozilla.org/en-US/firefox/addon/sqlite-manager/).
