@@ -3,11 +3,13 @@ layout: page
 title: Computer Setup
 ---
 
-***BIOL 691 students will need their own laptops set up with R by week 2.***
+***BIOL 691 students will need their own laptops set up with OpenRefine, R, and RStudio.***
 
 ### OpenRefine
 
-Download and install [OpenRefine](http://openrefine.org/download.html). 
+Download and install [OpenRefine](http://openrefine.org/download.html).
+
+Note: OpenRefine runs in your default browser, but will not run correctly in Internet Explorer. If needed, download Firefox or Chrome.
 
 <!--### SQL
 
