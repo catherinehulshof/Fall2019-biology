@@ -7,6 +7,13 @@ language: R
  
 > Get familiarized with [metadata](http://www.esapubs.org/archive/ecol/E095/064/metadata.php) - *Acacia drepanolobium* Surveys
 
+### ggplot
+
+* Very popular plotting package
+* Good plots quickly
+* Declarative - describe what you want not how to build it
+* Constrasts w/Imperative - how to build it step by step
+
 ### Data
 
 * Data on acacia size in an experiment in Africa excluding large herbivores
@@ -14,7 +21,7 @@ language: R
 * Includes information on if the plant is dead in the HEIGHT column
 
 ```
-acacia <- read.csv("http://www.esapubs.org/archive/ecol/E095/064/ACACIA_DREPANOLOBIUM_SURVEY.txt", sep="\t", na.strings = "dead")
+acacia <- read.csv("http://www.esapubs.org/archive/ecol/E095/064/ACACIA_DREPANOLOBIUM_SURVEY.txt", sep="\t", na.strings = c("dead"))
 ```
 
 ### Basics
@@ -68,7 +75,7 @@ ggplot(acacia, aes(x = CIRC, y = HEIGHT)) +
        title = "Acacia Survey at UHURU")
 ```
 
-> Do [Exercise 2 - Mass vs Metabolism]({{ site.baseurl }}/exercises/Graphing-mass-vs-metabolism-R).
+> Do Tasks 1-2 in [Mass vs Metabolism]({{ site.baseurl }}/exercises/Graphing-mass-vs-metabolism-R).
 
 ### Grouping
 
@@ -90,15 +97,27 @@ ggplot(acacia, aes(x = CIRC, y = HEIGHT)) +
 
 * Where are all the acacia in the open plots? (eaten?)
 
-> Do Tasks 1-4 in [Exercise 3 - Adult vs Newborn Size]({{ site.baseurl }}/exercises/Graphing-adult-vs-newborn-size-R).
+> Do Tasks 3-4 in [Mass vs Metabolism]({{ site.baseurl }}/exercises/Graphing-mass-vs-metabolism-R).
+
+> Assign Tasks 1-4 in [Adult vs Newborn Size]({{ site.baseurl }}/exercises/Graphing-adult-vs-newborn-size-R).
 
 ### Layers
 
+* We've seen that ggplot makes graphs by combining information on
+  * Data
+  * Mapping of parts of that data to aspects of the plot
+  * A geometric object to represent the data
+
+```
+ggplot(acacia, aes(x = CIRC, y = HEIGHT)) +
+  geom_point()
+```
+
+* Many kinds of geometric object (type `geom_` and show completions)
+
 * Usage
     * `ggplot()` sets defaults for layers
-    * Combine layers with `ggplot()` using `+`
-    * Must have at least one layer to plot
-    * Add additional layers, as necessary
+    * Can combine multiple layers using `+`
         * Order matters
 
 * Combine different kinds of layers
@@ -118,30 +137,7 @@ ggplot(acacia, aes(x = CIRC, y = HEIGHT, color = TREATMENT)) +
   geom_smooth(method = "lm")
 ```
 
-* Combining different data sources
-* Add tree size data for context
-* Layers are plotted in the order they are added
-
-```
-trees <- read.csv("http://www.esapubs.org/archive/ecol/E095/064/TREE_SURVEYS.txt",
-                  sep="\t", na.strings = c("dead", "missing", "MISSING", "NA"))
-ggplot() +
-  geom_point(data = trees, aes(x = CIRC, y = HEIGHT), color = "gray") +
-  geom_point(data = acacia, aes(x = CIRC, y = HEIGHT), color = "red") +
-  labs(x = "Circumference [cm]", y = "Height [m]")
-```
-
-* Each layer will default to `ggplot()` mappings unless modified
-    * So, we don't have to specify the arguments that are the same
-
-```
-ggplot(mapping = aes(x = CIRC, y = HEIGHT)) +
-  geom_point(data = trees, color = "gray") +
-  geom_point(data = acacia, color = "red") +
-  labs(x = "Circumference [cm]", y = "Height [m]")
-```
-
-> Do Task 5 in [Exercise 3 - Adult vs Newborn Size]({{ site.baseurl }}/exercises/Graphing-adult-vs-newborn-size-R).
+> Do Task 5 in [Adult vs Newborn Size]({{ site.baseurl }}/exercises/Graphing-adult-vs-newborn-size-R).
 
 ### Statistical transformations
 
@@ -186,32 +182,44 @@ ggplot(acacia, aes(x = CIRC)) +
   labs(x = "Circumference", y = "Number of Individuals")
 ```
 
-### Additional information
+> Do Tasks 1-2 in [Sexual Dimorphism Exploration]({{ site.baseurl }}/exercises/Graphing-sexual-dimorphism-exploration-R).
 
-* Geometric object
-    * [`geom_point()`](http://docs.ggplot2.org/current/geom_point.html)
-    * [`geom_line()`](http://docs.ggplot2.org/current/geom_path.html)
-* Statistical visualization
-    * [`geom_smooth()`](http://docs.ggplot2.org/current/geom_smooth.html)
-    * [`geom_bar()`](http://docs.ggplot2.org/current/geom_bar.html)
-    * [`geom_histogram()`](http://docs.ggplot2.org/current/geom_histogram.html)
-    * [`geom_boxplot()`](http://docs.ggplot2.org/current/geom_boxplot.html)
-* Dataset and aesthetic adjustments
-    * [`scale_continuous()`](http://docs.ggplot2.org/current/scale_continuous.html)
-    * [`scale_manual()`](http://docs.ggplot2.org/current/scale_manual.html)
-    * [`lims()`](http://docs.ggplot2.org/current/lims.html)
-    * [`labs()`](http://docs.ggplot2.org/current/labs.html)
-    * [`guide_legend()`](http://docs.ggplot2.org/current/guide_legend.html)
-    * [`theme()`](http://docs.ggplot2.org/current/theme.html), `theme_bw()`, `theme_classic()`
-* Grouping related data
-    * Same plot
-        * Assign grouping variables as default or layer `aes()`
-            * `group`
-            * `color`
-            * `shape`
-    * Multiple plots
-        * [`facet_grid()`](http://docs.ggplot2.org/current/facet_grid.html)
-        * [`facet_wrap()`](http://docs.ggplot2.org/current/facet_wrap.html)
+### Combining different data and aesthetics
+
+* Add tree size data for context
+* Layers are plotted in the order they are added
+
+```
+trees <- read.csv("http://www.esapubs.org/archive/ecol/E095/064/TREE_SURVEYS.txt",
+                  sep="\t", na.strings = c("dead", "missing", "MISSING", "NA"))
+ggplot() +
+  geom_point(data = trees, aes(x = CIRC, y = HEIGHT), color = "gray") +
+  geom_point(data = acacia, aes(x = CIRC, y = HEIGHT), color = "red") +
+  labs(x = "Circumference [cm]", y = "Height [m]")
+```
+
+* Each layer will default to `ggplot()` mappings unless modified
+    * So, we don't have to specify the arguments that are the same
+
+```
+ggplot(mapping = aes(x = CIRC, y = HEIGHT)) +
+  geom_point(data = trees, color = "gray") +
+  geom_point(data = acacia, color = "red") +
+  labs(x = "Circumference [cm]", y = "Height [m]")
+```
+
+> Do Task 3 in [Sexual Dimorphism Exploration]({{ site.baseurl }}/exercises/Graphing-sexual-dimorphism-exploration-R).
+
+### Grammar of graphics
+
+* Geometric object(s)
+  * Data
+  * Mapping
+  * Statistical transformation
+  * Position
+* Coordinates
+* Facets
+* In combination uniquely describes any plot
 
 ### Saving plots as new files
 
@@ -227,3 +235,5 @@ ggsave(“acacia_by_treatment.jpg”)
 ```
 ggsave(“figures/acacia_by_treatment.pdf”, height = 5, width = 5)
 ```
+
+> Assign the rest of the exercises.

@@ -78,7 +78,7 @@ biological problems. Class will typically consist of short introductions or
 question & answer sessions, followed by hands on computing exercises. The course
 will be taught using R and SQLite, but the concepts learned will easily apply to
 all programming languages and database management systems. No background in
-programming of databases is required.
+programming or databases is required.
 
 
 ### Prerequisite Knowledge and Skills
@@ -116,7 +116,7 @@ learning to program and work with data requires actively working on
 computers. Flipped classes work well for all kinds of content, but I think they
 work particularly well for computer oriented classes. If you're interested in
 knowing more take a look at this great
-[info-graphic](http://www.knewton.com/flipped-classroom-2/).
+[info-graphic](https://www.knewton.com/flipped-classroom-2/).
 
 
 ### Instructional Methods

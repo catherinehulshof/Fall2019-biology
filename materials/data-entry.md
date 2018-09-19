@@ -5,6 +5,12 @@ title: Data Entry
 language: Excel
 ---
 
+### Plan
+
+* What's the first thing to do when you are ready to enter data?
+* Plan a data structure follows tidy data rules
+* Ideally plan before you collect data and match datasheets to entry format
+
 ### Where to enter data
 
 * Spreadsheet

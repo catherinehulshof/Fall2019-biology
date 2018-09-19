@@ -13,14 +13,15 @@ language: R
 
 > Load the following into browser window:
 
-> * Projections figure from http://neondataskills.org/R/Introduction-to-Raster-Data-In-R/
-> * Canopy Height Model figure from http://neondataskills.org/R/Raster-Calculations-In-R/
+> * [Projections picture](https://media.opennews.org/cache/06/37/0637aa2541b31f526ad44f7cb2db7b6c.jpg)
+> * [Canopy Height Model picture](https://datacarpentry.org/r-raster-vector-geospatial/images/dc-spatial-raster/lidarTree-height.png)
 
 > Set-up R Console:
 
 ```
 library(raster)
 library(rgdal)
+library(ggplot2)
 ```
 
 ### `raster` structure, import, and plotting
@@ -29,8 +30,11 @@ library(rgdal)
     * gridded format (*like coordinates*)
     * each pixel is a value
 	* most remote sensing and environmental data
-
 * `raster()` import
+
+* DSM is Digital Surface Model: elevation of top physical point
+* See diagram
+* Later use with Digital Terrain Model (elevation of ground) to create Canopy Height Model
 
 ```
 dsm_harv <- raster("data/NEON-airborne/HARV_dsmCrop.tif")
@@ -45,25 +49,36 @@ dsm_harv <- raster("data/NEON-airborne/HARV_dsmCrop.tif")
 * `dsm_harv` is a `RasterLayerObject` and we can get individual pieces of it's
    metadata using appropriate functions
 
-```
-nbands(dsm_harv)
-crs(dsm_harv)
-```
-
-* Plotting
-    * package modifies R basic `graphics`
+* Change to dataframe for `ggplot`
+* `as.data.frame` is overloaded by `raster` to let it convert spatial data
 
 ```
-plot(dsm_harv)
+dsm_harv_df = as.data.frame(dsm_harv, xy = TRUE)
+head(dsm_harv_df)
+```
+
+* `coord_quickmap()` sets projection
+
+```
+ggplot() +
+  geom_raster(data = dsm_harv_df, 
+              aes(x = x, y = y, fill = HARV_dsmCrop)) +
+  coord_quickmap()
+
 ```
 
 * Looking at raster values
 
 ```
-hist(dsm_harv)
+ggplot() +
+  geom_histogram(data = dsm_harv_df, 
+                 aes(x = HARV_dsmCrop))
+
 ```
 
 ### `raster` math
+
+> Show > * [Canopy Height Model picture](https://datacarpentry.org/r-raster-vector-geospatial/images/dc-spatial-raster/lidarTree-height.png)
 
 * The DSM data is a Digital Surface Model: elevation of top physical point
 * DTM is Digital Terrain Model: elevation of the ground
@@ -74,25 +89,40 @@ dtm_harv <- raster("data/NEON-airborne/HARV_dtmCrop.tif")
 chm_harv <- dsm_harv - dtm_harv
 ```
 
+* Math happens on a cell by cell (elementise) basis
+
 > Do Tasks 1-2 of [Canopy Height from Space]({{ site.baseurl }}/exercises/Neon-canopy-height-from-space-R).
 
 
 ### Import and reproject shapefiles
 
-* `vector` data can be added to `rasters` to provide reference information
-    * `csv`
-    * `shapefile`
-        * set of multiple files
-            * same name, different extensions
-        * `readOGR("directory", "file_name_without_extensions")`
-            * stores data in a single `data.frame`
-            * access 'attributes' similar to GIS software using `$`
-                * `file_name$site_id`
+* `vector` data includes points, lines, and polygons
+* `shapefiles` are one main format
+    * set of multiple files
+        * same name, different extensions
+    * `readOGR("directory", "file_name_without_extensions")`
+        * stores data in a single `data.frame`
+        * access 'attributes' similar to GIS software using `$`
+            * `file_name$site_id`
 
 ```
-plots_harv <- readOGR("data/NEON-airborne/plot_locations", "HARV_plots")
-plot(chm_harv)
-plot(plots_harv, add = TRUE, pch = 4, cex = 1.5)
+plots_harv <- readOGR("data/NEON-airborne/plot_locations", 
+                      "HARV_plots")
+```
+
+* Plot `vector` on top of `raster`
+
+```
+chm_harv_df = as.data.frame(chm_harv, xy = TRUE)
+plots_harv_df = as.data.frame(plots_harv)
+```
+
+```
+ggplot() +
+  geom_raster(data = chm_harv_df, 
+              aes(x = x, y = y, fill = layer)) +
+  geom_point(data = plots_harv_df, 
+             aes(x = coords.x1, y = coords.x2), color = "yellow")
 ```
 
 * Uh oh, nothing happened.
@@ -110,7 +140,15 @@ crs(plots_harv)
 
 ```
 plots_harv_utm <- spTransform(plots_harv, crs(chm_harv))
-plot(plots_harv_utm, add = TRUE, pch = 4, cex = 1.5)
+plots_harv_utm_df = as.data.frame(plots_harv_utm)
+```
+
+```
+ggplot() +
+  geom_raster(data = chm_harv_df, 
+              aes(x = x, y = y, fill = layer)) +
+  geom_point(data = plots_harv_utm_df, 
+             aes(x = coords.x1, y = coords.x2), color = "yellow")
 ```
 
 ### Extract raster data
@@ -156,11 +194,21 @@ ndvi_files = list.files("data/HARV_NDVI/",
 ndvi_rasters <- stack(ndvi_files)
 ```
 
-* Can visualize up to 16 layers using `plot()`
+* Count number of layers
 
 ```
-plot(ndvi_rasters)
-plot(ndvi_rasters, c(1, 3, 5, 7, 9, 11))
+nlayers(dsm_harv)
+nlayers(ndvi_rasters)
+```
+
+* Plot one layer
+
+```
+ndvi_rasters_df = as.data.frame(ndvi_rasters, xy = TRUE)
+ggplot() +
+  geom_raster(data = ndvi_rasters_df, 
+              aes(x = x, y = y, alpha = HARV_NDVI_2015353)) +
+  coord_quickmap()
 ```
 
 * Calculate values across each raster using `cellStats()`
@@ -199,11 +247,13 @@ points_spat <- SpatialPointsDataFrame(
 	points_csv[c('long', 'lat')], 
 	points_csv, 
 	proj4string = points_crs)
+str(points_spat)
 ```
 
 ```
-str(points_spat)
-plot(points_spat)
+points_spat_df = as.data.frame(points_spat)
+extract(chm_harv, points_spat_df, buffer = 10, fun = mean)
+
 ```
 
 > Do [Species Occurrences Elevation Histogram]({{ site.baseurl }}/exercises/Spatial-data-elevation-histogram-R).
@@ -211,24 +261,34 @@ plot(points_spat)
 
 ### Map of point data
 
-* Can plot points on Google Map segment with `ggmap` package
-
+* Maps are available in the `maps` package
+* Polygons, but already stored as data frames
+  
 ```
-library(ggmap)
-```
-
-* Uses only dataframes, not spatial data
-* Generate map segment with csv coordinates
-
-```
-avg_long = mean(points_csv$long)
-avg_lat = mean(points_csv$lat)
-map = get_map(location = c(lon = avg_long, lat = avg_lat), zoom = 14)
+map = map_data("state", region = "massachusetts")
+ggplot() +
+  geom_polygon(data = map, 
+               aes(x = long, y = lat, group = group), 
+               fill = "grey")
 ```
 
-* Plot original csv points
+* Add spatial data on top
 
 ```
-ggmap(map) +
-    geom_point(data = points_csv, aes(x = long, y = lat))
+ggplot() +
+  geom_polygon(data = map, 
+               aes(x = long, y = lat, group = group), 
+               fill = "grey") +
+  geom_point(data = points_spat_df, 
+             aes(x = long, y = lat))
+```
+
+* Can also retriever data for countries
+
+```
+usmap = map_data("usa")
+ggplot() +
+  geom_polygon(data = usmap, 
+               aes(x = long, y = lat, group = group), 
+               fill = "grey")
 ```

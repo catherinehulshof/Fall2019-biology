@@ -12,9 +12,10 @@ title: List of datasets
 | Portal all | SQLite | <https://ndownloader.figshare.com/files/2292171> |
 | Shrub dimensions | csv | <http://www.datacarpentry.org/semester-biology/data/shrub-dimensions-labeled.csv> |
 | Gainesville precipitation | csv | <http://www.datacarpentry.org/semester-biology/data/gainesville-precip.csv> |
-| Shrub dimensions experiment | csv | <http://www.datacarpentry.org/semester-biology/data/shrub-volume-experiment.csv> |
-| UHURU acacia experiment | tsv | <http://www.esapubs.org/archive/ecol/E095/064/ACACIA_DREPANOLOBIUM_SURVEY.txt> |
-| UHURU tree survey | tsp | <http://www.esapubs.org/archive/ecol/E095/064/TREE_SURVEYS.txt> |
+| Shrub dimensions experiment | csv | <http://www.datacarpentry.org/semester-biology/data/shrub-volume-data.csv> |
+| UHURU acacia experiment | tsv | <https://ndownloader.figshare.com/files/5629542> |
+| UHURU tree survey | tsv | <https://ndownloader.figshare.com/files/5629536> |
+| Mammal masses | tsv | https://ndownloader.figshare.com/files/5593343 |
 | SQL practice | SQLite | <http://www.datacarpentry.org/semester-biology/data/sql-practice.sqlite> |
 | Mammal life history | tsv | <http://esapubs.org/archive/ecol/E084/093/Mammal_lifehistories_v2.txt> |
 | Bird size | tsv | <http://www.esapubs.org/archive/ecol/E088/096/avian_ssd_jan07.txt> |

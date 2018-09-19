@@ -33,31 +33,26 @@ language: R
 ### Basic expressions
 
 * Write code directly in the interpreter
+* Kangaroo rat weight (g -> lb)
 
 ```
-2 + 5
-4 * 2 / 3
+50
+50 / 1000
+50 / 1000 * 2.2
 ```
 
-* Write code in text editor and the run either by line or all code
+* Write code in text editor and run either by line or all code
 
 ```
-2 + 5
-4 * 2 / 3
+50
+50 / 1000
+50 / 1000 * 2.2
 ```
 
 * `Source` vs `Source with Echo`
 
 > Create notes R script, put in new folder
 
-### Types
-
-* All values have types
-
-```
-str(2)
-str('hello world')
-```
 
 ### Variables
 
@@ -65,28 +60,41 @@ str('hello world')
     * Assign using `<-` or `=`
 
 ```
-weight <- 26
+weight_g <- 50
 ```
 
 * It works just like the value itself
 
 ```
-double_weight <- weight * 2
+weight_g / 1000
+weight_g / 1000 * 2.2
+weight_lb = weight_g / 1000 * 2.2
 ```
 
 * It won't change unless you assign a new value to it directly
 
 ```
-weight
-weight * 2
-weight
-weight <- 22
-weight
+weight_g
+weight_g * 2
+weight_g
+weight_g <- 26
+weight_g
+```
+
+### Comments
+
+* Remember what code is doing
+* For humans, not computers
+* Use the `#`
+
+```
+# Calculate weight of Kangaroo Rat in pounds
 ```
 
 ### Assignments format
 
 * Comment before each problem and each sub-problem
+* Make sure result prints out on `Source with echo`
 
 ```
 # Problem 1
@@ -107,41 +115,66 @@ volume
 ```
 > Create assignment script, put in new folder
 
-> Do [Exercise 1 - Basic Expressions]({{ site.baseurl }}/exercises/Expressions-and-variables-basic-expressions-R/)
+> Do [Exercise 1.1-1.3 - Basic Expressions]({{ site.baseurl }}/exercises/Expressions-and-variables-basic-expressions-R/)
 
 > Do [Exercise 2 - Basic Variables]({{ site.baseurl }}/exercises/Expressions-and-variables-basic-variables-R/)
 
 
 ### Functions
 
-* A function is basically a complicated expression. It is a command that returns
-  a value, but hides the details of how that value is determined. This is useful
-  because we typically don't want to look at the details of how numbers are
-  rounded or lists of numbers are sorted.
+* A function is a complicated expression.
+* Command that returns a value
+* Hides the details of how that value is determined.
+* Useful - don't want to know how numbers are rounded
 
 ```
-abs(-2)
+sqrt(weight_lb)
+sqrt(0.11)
 ```
 
-* A function call is composed of two parts, the name of the function and the
-  arguments that the function requires to calculate the value it returns. In the
-  example above `abs()` is the name of the function, and `-2` is the argument.
+* A function call is composed of two parts.
+    * Name of the function
+    * Arguments that the function requires to calculate the value it returns.
+    * `sqrt()` is the name of the function, and `0.11` is the argument.
 
-* Functions can take multiple arguments. For example, if we want to round `pi` to
-  two decimal places we would use the round function with the arguments `3.14159`
-  and `2`, where the first argument is the number to be rounded and the second
-  argument is the number of decimal points to round it to.
+* Functions can take multiple arguments.
+    * Round `weight_lb` to one decimal place
+    * Typing `round()` shows arguments
+    * Number to be rounded and number of digits
 
 ```
-round(3.14159, 2)
+round(0.11, 1)
+round(weight_lb, 1)
 ```
 
 * Save the output of a function by assigning it to a variable
 
 ```
-pi_approx <- round(3.14159, 2)
-pi_approx
+weight_rounded <- round(weight_lb, 1)
+weight_rounded
 ```
 
-> Do [Exercise 4 - Built-in Functions]({{ site.baseurl }}/exercises/Functions-built-in-functions-R/)
+> Do [Exercise 4.1-4.3 - Built-in Functions]({{ site.baseurl }}/exercises/Functions-built-in-functions-R/)
 
+* If you don't save the output of a function then there is no way to access it
+
+```
+mass_kg <- 0.5163
+round(mass_kg, 2)
+```
+
+* It is common to forget this when dealing with variables and expect the
+  variable to have changed
+
+```
+mass_kg
+```
+
+### Types
+
+* All values have types
+
+```
+str(weight_lb)
+str('hello world')
+```
