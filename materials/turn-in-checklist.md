@@ -10,7 +10,6 @@ title: Assignment Submission & Checklist
 - To create zip, put all files into single folder, right click folder, and select compress option
 - Submit folder through Blackboard
 
-
 # Code Checklist
 
 #### Clean up your code
