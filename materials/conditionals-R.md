@@ -18,11 +18,13 @@ language: R
     * `==`, `!=`
     * `<`, `>`
     * `<=`, `>=`
+    * `%in%`
 
 ```
 10 > 5
 "aang" == "aang"
 3 != 3
+"dog" %in% c("cat", "dog", "rabbit")
 ```
 
 * Combine:
@@ -39,7 +41,7 @@ language: R
     * `dplyr::filter()`
     * `if()`, `else`, `while()`
 
-> Do [Choice Operators]({{ site.baseurl }}/exercises/Making-choices-choice-operators-R).
+> Do Tasks 1-4 in [Choice Operators]({{ site.baseurl }}/exercises/Making-choices-choice-operators-R).
 
 > Discuss floating point with students.
 >
@@ -147,7 +149,7 @@ est_mass(1.6, "grass")
 est_mass(1.6, "shrub")
 ```
 
-> Do [Complete the Code]({{ site.baseurl }}/exercises/Making-choices-complete-the-code-R).
+> Do [Size Estimates by Name]({{ site.baseurl }}/exercises/Making-choices-size-estimates-by-name-R).
 
 
 * Can use more complex conditions
@@ -157,7 +159,7 @@ est_mass <- function(volume, veg_type, age){
   if (veg_type == "tree") {
     if (age < 5) {
 	  mass <- 1.6 * volume^0.8
-	} else {
+	  } else {
 	  mass <- 2.65 * volume^0.9
 	}
   } else if (veg_type == "grass" | veg_type == "shrub") {
@@ -178,4 +180,4 @@ est_mass(1.6, "shrub", age = 5)
 * If so does one calculation, if not does another
 * But nesting can be difficult to follow so try to minimize it
 
-> Do [Choices with Functions]({{ site.baseurl }}/exercises/Making-choices-choices-with-functions-R).
+> Assign the rest of the exercises.

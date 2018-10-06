@@ -28,7 +28,7 @@ language: R
 ### Reuse
 
 * Want to do the same thing repeatedly?
-    * Inefficient to copy code
+    * Inefficient & error prone to copy code
     * If it occurs in more than one place, it will eventually be wrong somewhere.
 * Functions are written to be reusable.
 
@@ -56,34 +56,24 @@ calc_shrub_vol(0.8, 1.6, 2.0)
 shrub_vol <- calc_shrub_vol(0.8, 1.6, 2.0)
 ```
 
-* Walk through function execution
+* Walk through function execution (using debugger)
     * Call function
 	* Assign 0.8 to length, 1.6 to width, and 2.0 to height inside function
 	* Calculate volume
 	* Send the volume back as output
 	* Store it in `shrub_vol`
 
-> Do [Writing Functions]({{ site.baseurl }}/exercises/Functions-writing-functions-R).
-
 * Treat functions like a black box.
     * Can't access a variable that was created in a function
-        * `> a`
-        * `Error: object 'a' not found`
+        * `> width`
+        * `Error: object 'width' not found`
     * 'Global' variables can influence function, but should not.
         * Very confusing and error prone to use a variable that isn't passed in
           as an argument
-    * Don't do this
 
-```
-length <- 1
-width <- 2
-height <- 3
+> Do [Writing Functions]({{ site.baseurl }}/exercises/Functions-writing-functions-R).
 
-calc_shrub_vol <- function() {
-  volume <- length * width * height
-  return(volume)
-}
-```
+### Default arguments
 
 * Defaults can be set for common inputs.
 
@@ -99,10 +89,31 @@ calc_shrub_vol(0.8, 1.6, 2.0)
 calc_shrub_vol(height = 2.0, length = 0.8, width = 1.6)
 ```
 
+### Named vs unnamed arguments
+
+* When to use or not use argument names
+
+```
+calc_shrub_vol(height = 2.0, length = 0.8, width = 1.6)
+```
+
+Or
+
+```
+calc_shrub_vol(2.0, 0.8, 1.6)
+```
+
+* You can always use names
+    * Value gets assigned to variable of that name
+* If not using names then order determines naming
+    * First value is `height`, second value is `length`...
+    * If order is hard to remember use names
+* In many cases there are *a lot* of optional arguments
+    * Convention to always name optional argument
+
 > Do [Use and Modify]({{ site.baseurl }}/exercises/Functions-use-and-modify-R).
 >
 > * Discuss why passing `a` and `b` in is more useful than having them fixed*
-
 
 ### Combining Functions
 
@@ -136,4 +147,4 @@ est_shrub_mass_dim <- function(length, width, height){
 est_shrub_mass_dim(0.8, 1.6, 2.0)
 ```
 
-> Do [Nested Functions]({{ site.baseurl }}/exercises/Functions-nested-functions-R).
+> Do [Combining Functions]({{ site.baseurl }}/exercises/Functions-combining-functions-R).
