@@ -2,7 +2,6 @@
 layout: page
 element: notes
 title: Googling for Help
-language: R
 ---
 
 > Check that top Google results haven't change and adjust as needed
@@ -84,7 +83,7 @@ language: R
 
 #### Search
 
-* Get the vocabularly right
+* Get the vocabulary right
 * Avoid extra words
 * Specify the language
 
