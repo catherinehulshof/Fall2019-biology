@@ -79,6 +79,7 @@ with it on your computer by changing the code and seeing what happens.*
 
 #### Course Notes
 
+- [Grading Rubric]({{ site.baseurl }}/materials/rubric.pdf)
 -   [Expressions, Types, Variables, and Errors]({{ site.baseurl }}/materials/expressions-types-variables-errors)
 -   [Expressions](http://nbviewer.ipython.org/urls/github.com/ethanwhite/progbio/raw/master/ipynbs/expressions.ipynb) ([notebook](https://raw.github.com/ethanwhite/progbio/master/ipynbs/expressions.ipynb))
 -   [Types](http://nbviewer.ipython.org/urls/github.com/ethanwhite/progbio/raw/master/ipynbs/types.ipynb) ([notebook](https://raw.github.com/ethanwhite/progbio/master/ipynbs/types.ipynb))
