@@ -23,6 +23,7 @@ title: Assignments
 * [Low-level Database Management Libraries](r-sql)
 * [Advanced Topics](r-advanced)
 * [Review](r-review)
+* [The Carpentries Instructional Techniques](carpentries)
 
 ### Git
 * [Git with R](r-git)
