@@ -2,7 +2,7 @@
 layout: page
 title: Assignment Schedule
 assignments: ['Data Entry and Storage', 'Introduction to R and RStudio', 'Working with Data', 'Data Visualization', 'Working with Spatial Data', 'Programming Fundamentals 1', 'Programming Fundamentals 2', 'The Carpentries Instructional Techniques', 'Student
-Chosen Topic', 'Student Chosen Topic', 'Student Chosen Topic', 'Student Chosen Topic']
+Chosen Topic 1', 'Student Chosen Topic 2', 'Student Chosen Topic 3', 'Student Chosen Topic 4']
 ---
 
 [Assignment submission & checklist]({{ site.baseurl }}/materials/turn-in-checklist)
