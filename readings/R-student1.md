@@ -12,4 +12,8 @@ language: R
 
 * Stable Isotopes (Allyson):
 
-  * [PlaceHolder](https://carpentries.github.io/instructor-training/11-practice-teaching/index.html)
+  * [SIAR Background]({{ site.baseurl }}/materials/SIAR-background.pdf)
+
+  * [SIBER Background]({{ site.baseurl }}/materials/SIBER-background.pdf)
+
+  * [Stable Isotopes Background]({{ site.baseurl }}/materials/Stable-Isotope-Background.pdf)
