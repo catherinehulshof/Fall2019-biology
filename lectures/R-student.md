@@ -6,3 +6,5 @@ language: R
 ---
 
 [Markdown Lecture]({{ site.baseurl }}/materials/Practice_Markdown.html)
+
+[Stable Isotope Lecture]({{ site.baseurl }}/materials/in.class.assignment.zip)

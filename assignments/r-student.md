@@ -9,10 +9,12 @@ language: R
 
 > Following this assignment students should be able to:
 >
-> - 
+> -
 > -
 > -
 
 [Markdown Assignment]({{ site.baseurl }}/materials/Assignment for Markdown.docx)
 
 [Markdown Output]({{ site.baseurl }}/materials/Speed_equals_danger.html)
+
+[Stable Isotope Assignment]({{ site.baseurl }}/materials/assignment.zip)
