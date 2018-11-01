@@ -1,0 +1,76 @@
+---
+title: "Practice Markdown"
+author: "Name"
+date: "October 31, 2018"
+output:
+  html_document:
+    toc: true
+    toc_depth: 1
+    toc_float: true
+---
+
+
+# Learning to use R Markdown 
+##Playing with the language
+*italics* vs _italics_       **Bold** vs __Bold__
+
+superscript^2^
+
+subscript~2~
+
+~~strikethrough~~
+
+* bullet 1  
+* bullet 2
+    + subbullet
+ 
+
+First Header  | Second Header
+------------- | -------------
+Content Cell  | Content Cell
+Content Cell  | Content Cell
+
+Today is `r Sys.Date()`.
+
+Inserting images and links into the document. 
+
+![Good Airquality Image.](good_air_quality.jpg) ![Bad Airquality Image.](bad_air.jpg)
+
+[Good Air Image Link](https://www.google.com/url?sa=i&source=images&cd=&cad=rja&uact=8&ved=2ahUKEwienrz576TeAhWQmeAKHQsFDfoQjRx6BAgBEAU&url=https%3A%2F%2Fwww.cannockchasedc.gov.uk%2Fbusiness%2Fenvironmental-health%2Fenvironmental-protection%2Flocal-air-quality-management&psig=AOvVaw17m18zMdgFO0HHjJ9fBZrM&ust=1540669588327519)  
+[Bad Air Image Link](https://www.google.com/url?sa=i&source=images&cd=&cad=rja&uact=8&ved=2ahUKEwj6jfPVg6XeAhXwmeAKHV0WBx0QjRx6BAgBEAU&url=http%3A%2F%2Ftime.com%2F4274355%2Fair-pollution-preterm-birth%2F&psig=AOvVaw1aZ14NgaFcIRb4DjiTOmT0&ust=1540674868458518)
+
+#Using Code Chunks
+
+Upload the Airquailty dataset. 
+
+```{r}
+library(datasets)
+summary(airquality)
+```
+
+# Making graphs with Markdown 
+
+Make Airquality scatterplot using the plots (). Use echo = FALSE within the code chunk to prevent printing the R code.
+
+```{r echo=FALSE}
+plot(airquality)
+```
+
+
+
+Linear regression model where solar radiation and wind can be used to predict Ozone levels.
+
+```{r echo=FALSE}
+lin_reg <- lm(Ozone~Solar.R + Wind + Temp, data = airquality)
+summary(lin_reg)
+```
+Now make 2 scatterplot in ggplot. First plot with x-axis = Ozone and y-axis = Solar.R and the second plot using the same X but now woth y-axis = Wind. 
+
+```{r echo=FALSE, warning=FALSE, fig.width=3, fig,height=5}
+library(ggplot2)
+ggplot()+
+  geom_point(data = airquality, aes(x = Ozone, y = Solar.R))
+ 
+  ggplot()+
+   geom_point(data = airquality, aes(x = Ozone, y = Wind))
+```
