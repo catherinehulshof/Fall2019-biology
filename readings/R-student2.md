@@ -7,8 +7,10 @@ language: R
 
 * Shiny (Kal):
 
-  * [Placeholder](https://rmarkdown.rstudio.com/lesson-1.html)
+  * [Shiny Basics](https://shiny.rstudio.com/articles/basics.html)
+  * [Shiny Cheatsheet](https://shiny.rstudio.com/images/shiny-cheatsheet.pdf)
 
-* Placeholder (Kayla):
+* Dates and Times in R (Kayla):
 
-  * [Placeholder]({{ site.baseurl }}/materials/SIAR-background.pdf)
+  * [Times Series](https://www.neonscience.org/dc-time-series-plot-ggplot-r)
+  * [Dates and Times](https://www.neonscience.org/dc-convert-date-time-POSIX-r)
