@@ -18,3 +18,5 @@ language: R
 [Markdown Output]({{ site.baseurl }}/materials/Speed_equals_danger.html)
 
 [Stable Isotope Assignment]({{ site.baseurl }}/materials/assignment.zip)
+
+  * [Stable Isotope Assignment Solution]({{ site.baseurl }}/materials/allyson_isotope_assignment_solutions.zip)
