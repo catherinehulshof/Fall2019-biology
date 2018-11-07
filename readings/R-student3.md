@@ -5,13 +5,16 @@ title: Student Chosen Topic 3
 language: R
 ---
 
-* Pavo - spectral analyses (Elsa):
+* Pavo - Spectral Analyses (Elsa):
 
-  * [Placeholder](https://rmarkdown.rstudio.com/lesson-1.html)
+  * [Spectrometry](https://www.atascientific.com.au/spectrometry/)
+  - Skip Mass Spectrometry, Astronomical Spectrometry, Biomedical Spectrometry, and EDS/EDX X-Ray Spectroscopy
+  * [Pavo package](http://rafaelmaia.net/pavo/articles/pavo.html)
+  - - Read Introduction, visualizing image data, and the section about image color-classification
 
-* Placeholder (Paul):
+* Genetic Clusters (Paul):
 
-  * [Placeholder]({{ site.baseurl }}/materials/SIAR-background.pdf)
+  * [Clusters](http://adegenet.r-forge.r-project.org/files/tutorial-dapc.pdf)
 
 * MRA - Mark-recapture (Lauren):
 

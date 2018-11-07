@@ -15,4 +15,8 @@ language: R
 
 [Shiny Assignment]({{ site.baseurl }}/materials/Kal_Shiny_Assignment.docx)
 
-[Shiny Assignment .csv Data]({{ site.baseurl }}/materials/Kal_coffee_data.csv)
+  * [Shiny Assignment .csv Data]({{ site.baseurl }}/materials/Kal_coffee_data.csv)
+
+[Dates and Times in R Assignment]({{ site.baseurl}}/materials/Kayla_dates_times_assignment.docx)
+
+  * [Dates and Times in R Output]({{ site.baseurl}}/materials/Kayla_dates_times_assignment_output.png)
