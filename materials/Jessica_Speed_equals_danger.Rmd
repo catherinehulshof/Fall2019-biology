@@ -1,0 +1,42 @@
+---
+title: "Speed Equals the Danger Zone"
+author: "Jessica Johnston"
+output: html_document
+---
+`r Sys.Date()`
+
+## Better to be safe than sorry
+
+```{r echo=FALSE, fig.cap="Safe Driving", out.width = '50%'}
+knitr::include_graphics("savedriving.jpg")
+```
+ [Safe Driving Link](https://img.haikudeck.com/mg/oJTyLO30RX_1395860397325.jpg)
+
+##Here is a table reminding us what not to do while driving 
+
+Driving DO's  | Driving Don'ts 
+------------- | -------------
+Safety Belt   | Texting
+Checking Mirrors  | Speeding 
+
+
+```{r cars, echo=FALSE, results='hide'}
+summary(cars)
+```
+
+## Increasing speed will increase stopping distance!!
+
+Let's look at some numbers that help prove it!
+
+```{r echo=FALSE}
+lmcars <- lm(speed~dist, data = cars)
+summary(lmcars)
+```
+
+*What does this mean graphically?*
+
+
+```{r}
+library(ggplot2)
+ggplot()+
+  geom_point(data = cars, aes(x = speed, y = dist))

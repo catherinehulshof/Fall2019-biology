@@ -15,7 +15,9 @@ language: R
 
 [Markdown Assignment]({{ site.baseurl }}/materials/Assignment for Markdown.docx)
 
-[Markdown Output]({{ site.baseurl }}/materials/Speed_equals_danger.html)
+  * [Markdown Solution Rmd file]({{ site.baseurl }}/materials/Jessica_Speed_equals_danger.Rmd)
+
+  * [Markdown Output]({{ site.baseurl }}/materials/Speed_equals_danger.html)
 
 [Stable Isotope Assignment]({{ site.baseurl }}/materials/assignment.zip)
 
