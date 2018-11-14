@@ -17,10 +17,10 @@ language: R
 
   * [Solutions PLACEHOLDER]()
 
-[Genetic Clusters Assignment]()
+[Genetic Clusters Assignment]({{ site.baseurl }}/materials/Paul_assignment.docx)
 
   * [Solutions PLACEHOLDER]()
 
-[Behavioral Change Point Assignment]()
+[Behavioral Change Point Assignment]({{ site.baseurl }}/materials/Lauren_BCPA_homework.zip))
 
   * [Solutions PLACEHOLDER]()

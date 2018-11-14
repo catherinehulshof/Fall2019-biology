@@ -9,7 +9,7 @@ language: R
 
   * [Evaluation Form: Elsa - Pavo and Spectral Data in R ](https://goo.gl/forms/7dT98XiQEVYMf2ix2)
 
-[Paul: Genetic Clusters PLACEHOLDER]()
+[Paul: Genetic Clusters]({{ site.baseurl }}/materials/Paul_lecture.docx)
 
   * [Evaluation Form: Paul - Genetic Clusters](https://goo.gl/forms/NU4U6nBkR4J2PHm83)
 
