@@ -1,0 +1,40 @@
+---
+title: "Shiny Assignment Output"
+author: "Kal Csigi"
+date: "November 13, 2018"
+output: html_document
+runtime: shiny
+---
+
+
+#Upload the coffee data to see the output!
+
+
+```{r, echo=FALSE}
+
+  fileInput("file", label = "Upload the Coffee Data")
+
+radioButtons("disp", "Display",
+             choices = c(Head = "head",
+                         All = "all"),
+             selected = "head")
+tableOutput("contents")
+
+
+
+
+renderTable({
+
+  req(input$file)
+  df <- read.csv(input$file$datapath,header=TRUE)
+  
+  if(input$disp == "head") {
+    return(head(df))
+  }
+  else {
+    return(df)
+  }
+})
+
+```
+
