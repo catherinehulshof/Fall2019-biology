@@ -17,6 +17,7 @@ language: R
 
   * [Shiny Assignment .csv Data]({{ site.baseurl }}/materials/Kal_coffee_data.csv)
   * [Shiny Output]({{ site.baseurl }}/materials/Kal_shiny_output.Rmd)
+  * [Shiny Output]({{ site.baseurl }}/materials/Kal_app_assignment.R)
 
 [Dates and Times in R Assignment]({{ site.baseurl}}/materials/Kayla_dates_times_assignment.docx)
 
