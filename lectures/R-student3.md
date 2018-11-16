@@ -13,6 +13,6 @@ language: R
 
   * [Evaluation Form: Paul - Genetic Clusters](https://goo.gl/forms/NU4U6nBkR4J2PHm83)
 
-[Lauren: Behavioral Change Point PLACEHOLDER]()
+[Lauren: Behavioral Change Point]({{ site.baseurl }}/materials/Lauren_bcpa_lecture.R)
 
   * [Evaluation Form: Lauren - Change Point](https://goo.gl/forms/vr7DwN11zelbng6k1)
