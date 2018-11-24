@@ -23,4 +23,4 @@ language: R
 
 [Behavioral Change Point Assignment]({{ site.baseurl }}/materials/Lauren_BCPA_homework.zip)
 
-  * [Solutions PLACEHOLDER]()
+  * [BCPA Solutions]({{ site.baseurl }}/materials/Lauren_BCPA_solutions.zip)
