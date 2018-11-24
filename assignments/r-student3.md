@@ -15,7 +15,7 @@ language: R
 
 [Pavo Spectral Assignment]({{ site.baseurl }}/materials/Elsa_pavo_assignment.zip)
 
-  * [Solutions PLACEHOLDER]()
+  * [Pavo Solutions]({{ site.baseurl }}/materials/elsa_pavo_solutions.R)
 
 [Genetic Clusters Assignment]({{ site.baseurl }}/materials/Paul_assignment.docx)
 
