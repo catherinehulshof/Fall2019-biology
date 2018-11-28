@@ -19,7 +19,7 @@ language: R
 
 [Genetic Clusters Assignment]({{ site.baseurl }}/materials/Paul_assignment.docx)
 
-  * [Solutions PLACEHOLDER]()
+  * [Solutions]({{ site.baseurl }}/materials/Paul_solutions.docx)
 
 [Behavioral Change Point Assignment]({{ site.baseurl }}/materials/Lauren_BCPA_homework.zip)
 
