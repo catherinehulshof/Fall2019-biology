@@ -5,7 +5,7 @@ title: Student Chosen Topic 4
 language: R
 ---
 
-[Lisa and Connie: Git and GitHub PLACEHOLDER]()
+[Lisa and Connie: Git and GitHub Lecture]({{ site.baseurl }}/materials/Git_lessonTEMPLATE.rtf)
 
   * [Evaluation Form: Lisa](https://goo.gl/forms/amEwxFVSL4i5076o2)
   * [Evaluation Form: Connie](https://goo.gl/forms/SkprEzcoE704jdgS2)

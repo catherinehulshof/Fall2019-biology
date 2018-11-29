@@ -1,0 +1,768 @@
+{\rtf1\ansi\ansicpg1252\cocoartf1404\cocoasubrtf470
+{\fonttbl\f0\fnil\fcharset0 Menlo-Regular;\f1\fnil\fcharset0 Menlo-Bold;}
+{\colortbl;\red255\green255\blue255;\red128\green0\blue128;\red0\green0\blue0;\red0\green0\blue255;
+\red0\green45\blue153;\red133\green0\blue175;\red114\green44\blue253;\red0\green61\blue204;\red180\green36\blue25;
+\red47\green180\blue29;\red159\green160\blue28;\red46\green174\blue187;\red133\green0\blue2;\red77\green0\blue105;
+\red74\green0\blue230;\red41\green0\blue130;}
+\margl1440\margr1440\vieww10800\viewh8400\viewkind0
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
+
+\f0\fs22 \cf0 \CocoaLigature0 \
+\cf2 Quick commands most often used in command line\
+Purple text throughout this file are helpful hints or explanation of what I am doing. \cf3 Black text is the directory and code. \cf4 Blue, red and green are outputs from the code.\cf2 \
+\
+cd 		#change directory\
+~		#home directory\
+ls 		#list the folders and files within the directory\
+vim 		#view, insert, and modify a file within command line\
+		#once the file is open press i to insert text if you wish. If you want to 		save the insertions, press esc then :wq. If you don\'92t wish to insert and 		save, press esc :q after viewing the file\
+\
+mkdir    #make a new directory (then specify the path ~/Desktop/DataScienceR)\
+\
+rename   #specify how you want it renamed, then space, write the original file 		name, then space, how you want it renamed again (like a rename sandwich)\
+\
+cp 	    # cp file(s) to a new directory  cp <file name or * (for all files)> ~/		path/to/directory\
+\
+control C will exit you out of an operation\
+\
+More can be found here https://gist.github.com/poopsplat/7195274 or any google search for a command line cheat sheet\
+\
+If you want to use the statistical program R while working command line, press R! To exit R, press q().\
+\cf0 \
+Boltes-MacBook-Pro:~ bolte$ install git-all\
+\
+Boltes-MacBook-Pro:~ bolte$ git --version\
+\cf5 git version 2.7.4 (Apple Git-66)\
+\
+\cf6 #You may get an error message. Always worth copying and pasting error messages into google. If you got the xcrun: error: invalid active developer path (/Library\'85etc), then type the code below may do the trick to fix the error.\
+\
+username/directory$ xcode-select \'97-install\cf0 \
+\
+Boltes-MacBook-Pro:~ bolte$ git config --global user.name "Connie Bolte"\
+Boltes-MacBook-Pro:~ bolte$ git config --global user.email "boltece@vcu.edu\'94\
+\
+Boltes-MacBook-Pro:~ bolte$ git config --list\
+\cf5 credential.helper=osxkeychain\
+user.name=Connie Bolte\
+user.email=boltece@vcu.edu\
+filter.lfs.clean=git-lfs clean -- %f\
+filter.lfs.smudge=git-lfs smudge -- %f\
+filter.lfs.process=git-lfs filter-process\
+filter.lfs.required=true\cf0 \
+\
+\
+Boltes-MacBook-Pro:~ bolte$ git config user.name\
+\cf5 Connie Bolte\
+\cf0 \
+Boltes-MacBook-Pro:~ bolte$ cd Desktop/DataScience_R/\
+\
+Boltes-MacBook-Pro:DataScience_R bolte$ ls\
+\cf5 Assignment for Markdown.docx		Kal_shiny_output.Rmd\
+Assignment_RMarkdown.Rmd		Kal_tastes_Coffee\
+DataScience_Rproject			Kayla_date_time_solutions.R\
+DataScience_classwork.R			Kayla_dates_times_assignment.docx\
+Date_time_howTO.R			NEON-DS-Met-Time-Series\
+Dates_Times_Assignment.R		Practice_Markdown.Rmd\
+Drive_safely.Rmd			Practice_Markdown.html\
+Drive_safely.html			Rmarkdown\
+Drive_safely.html.zip			Shine_On\
+Jessica_PracticeMarkdown.Rmd		Shine_On.Rmd\
+Kal_Shiny_Assignment.docx		clean_air_innovation.jpg\
+Kal_app_assignment.R			rmarkdown-cheatsheet-2.0.pdf\
+Kal_coffee_data.csv\
+\
+\cf7 #cd .. moves you back one step in your directory path , cd ../.. moves you two steps back\cf5 \
+\cf0 Boltes-MacBook-Pro:DataScience_R bolte$ cd ..\
+\
+\cf7 #Grab/Clone my hello_world repository from GitHub. Make sure you are within the working directory that you\'92d like this GitHub repository to be placed\cf0 \
+\
+Boltes-MacBook-Pro:Desktop bolte$ git clone https://github.com/boltece/hello_world\
+\cf8 Cloning into 'hello_world'...\
+remote: Enumerating objects: 10, done.\
+remote: Counting objects: 100% (10/10), done.\
+remote: Compressing objects: 100% (6/6), done.\
+remote: Total 10 (delta 0), reused 0 (delta 0), pack-reused 0\
+Unpacking objects: 100% (10/10), done.\
+Checking connectivity... done.\
+\cf0 \
+Boltes-MacBook-Pro:Desktop bolte$ cd hello_world/\
+\
+Boltes-MacBook-Pro:hello_world bolte$ ls\
+My_data_sci_friends.csv	README.md\
+\
+Boltes-MacBook-Pro:hello_world bolte$ vim My_data_sci_friends.csv \
+\
+Boltes-MacBook-Pro:hello_world bolte$ git status\
+On branch master\
+Your branch is up-to-date with 'origin/master'.\
+Changes not staged for commit:\
+  (use "git add <file>..." to update what will be committed)\
+  (use "git checkout -- <file>..." to discard changes in working directory)\
+\
+	\cf9 modified:   My_data_sci_friends.csv\cf0 \
+\
+no changes added to commit (use "git add" and/or "git commit -a")\
+\
+Boltes-MacBook-Pro:hello_world bolte$ git add My_data_sci_friends.csv \
+\
+Boltes-MacBook-Pro:hello_world bolte$ git status\
+On branch master\
+Your branch is up-to-date with 'origin/master'.\
+Changes to be committed:\
+  (use "git reset HEAD <file>..." to unstage)\
+\
+	\cf10 modified:   My_data_sci_friends.csv\cf0 \
+\
+Boltes-MacBook-Pro:hello_world bolte$ git commit\
+[master 9e633e8] Connie's favorite color has been recorded\
+ 1 file changed, 2 insertions(+), 1 deletion(-)\
+\
+Boltes-MacBook-Pro:hello_world bolte$ git push origin master\
+\cf8 Counting objects: 3, done.\
+Delta compression using up to 2 threads.\
+Compressing objects: 100% (2/2), done.\
+Writing objects: 100% (3/3), 341 bytes | 0 bytes/s, done.\
+Total 3 (delta 0), reused 0 (delta 0)\
+To https://github.com/boltece/hello_world\
+   6f7d120..9e633e8  master -> master\cf0 \
+\
+Boltes-MacBook-Pro:hello_world bolte$ git log --pretty=oneline\
+\cf11 e44113fa50a19723dac269203f2e3b4fcae1a0b0\cf0  Added Rebecca's fave\
+\cf11 9e633e8f4a89be335a3073aff1282c878ccf84d7\cf0  Connie's favorite color has been recorded\
+\cf11 6f7d120c8fc45af68e03a3f94344ce52a27c47ff\cf0  List of friends in Data Science class\
+\cf11 18339cbf1e0b5bf269b066453f71ab2d8ef47c85\cf0  Merge pull request #1 from boltece/readme-edits\
+\cf11 824aa49d2fa2e0063cb5ea9568e97f1261404968\cf0  Update README.md\
+\cf11 c0c7d1daaba2b3f04cf132a3ea42441d5a40c345\cf0  Initial commit\
+\cf5 \
+\cf0 Boltes-MacBook-Pro:hello_world bolte$ git show \cf3 6f7d120c8fc45af68e03a3f94344ce52a27c47ff:./My_data_sci_friends.csv\cf8  \
+Name,Favorite color\cf0 \
+Boltes-MacBook-Pro:hello_world bolte$ git show 9e633e8f4a89be335a3073aff1282c878ccf84d7:./My_data_sci_friends.csv \
+\cf4 Name,Favorite color\
+Connie,Green\cf0 \
+Boltes-MacBook-Pro:hello_world bolte$ git show master\
+\cf11 commit e44113fa50a19723dac269203f2e3b4fcae1a0b0\cf0 \
+Author: Connie Bolte <boltece@vcu.edu>\
+Date:   Wed Nov 28 11:16:21 2018 -0500\
+\
+    Added Rebecca's fave\
+\
+
+\f1\b diff --git a/My_data_sci_friends.csv b/My_data_sci_friends.csv
+\f0\b0 \
+
+\f1\b index a90fa55..16beaac 100644
+\f0\b0 \
+
+\f1\b --- a/My_data_sci_friends.csv
+\f0\b0 \
+
+\f1\b +++ b/My_data_sci_friends.csv
+\f0\b0 \
+\cf12 @@ -1,2 +1,3 @@\cf0 \
+ Name,Favorite color\
+ Connie,Green\
+\cf10 +Rebecca, Blue\cf0 \
+\cf5 \
+\cf7 ### In the series of code below, I have made a .git (hidden) folder within the R scripts directory\cf5 \
+\cf0 Boltes-MacBook-Pro:~ bolte$ cd Desktop/\
+\
+\
+Boltes-MacBook-Pro:Desktop bolte$ cd R\\ scripts\
+\
+Boltes-MacBook-Pro:R scripts bolte$ git init\
+\cf4 Initialized empty Git repository in /Users/bolte/Desktop/R scripts/.git/\cf0 \
+\
+\cf7 # I have to tell the new .git folder what files I want to be tracked, so I added the Rasters.R file below\cf0 \
+\
+Boltes-MacBook-Pro:R scripts bolte$ git add Rasters.R \
+\
+Boltes-MacBook-Pro:R scripts bolte$ git status\
+\cf5 On branch master\
+\
+Initial commit\
+\
+Changes to be committed:\
+  (use "git rm --cached <file>..." to unstage)\
+\cf0 \
+	\cf10 new file:   Rasters.R\cf0 \
+\
+\cf4 Untracked files:\
+  (use "git add <file>..." to include in what will be committed)\
+\
+\cf0 	\cf9 .DS_Store\cf0 \
+	\cf9 .Rapp.history\cf0 \
+	\cf9 BIo 1.R\cf0 \
+	\cf9 BioClim_rasters (1) copy.R\cf0 \
+	\cf9 BioClim_rasters (1).R\cf0 \
+	\cf9 BioClim_rasters.R\cf0 \
+	\cf9 FIsh_maxent.R\cf0 \
+	\cf9 Pedigrees.R\cf0 \
+	\cf9 R_materials/\cf0 \
+	\cf9 SEM_allelic_richness.R\cf0 \
+	\cf9 SEM_scripts.R\cf0 \
+	\cf9 midterm.R\cf0 \
+	\cf9 niche overlap2 copy.R\cf0 \
+	\cf9 niche overlap2.R\cf0 \
+	\cf9 shapefile map_MS thesis copy.R\cf0 \
+	\cf9 shapefile map_MS thesis.R\cf0 \
+\
+\
+\cf7 #Below I modified Raster.R using the code below then checked to see if it was recorded by the .git folder\cf0 \
+\
+Boltes-MacBook-Pro:R scripts bolte$ vim Rasters.R \
+\
+Boltes-MacBook-Pro:R scripts bolte$ git status -s\
+\cf10 A\cf9 M\cf0  Rasters.R\
+\cf9 ??\cf0  .DS_Store\
+\cf9 ??\cf0  .Rapp.history\
+\cf9 ??\cf0  BIo 1.R\
+\cf9 ??\cf0  BioClim_rasters (1) copy.R\
+\cf9 ??\cf0  BioClim_rasters (1).R\
+\cf9 ??\cf0  BioClim_rasters.R\
+\cf9 ??\cf0  FIsh_maxent.R\
+\cf9 ??\cf0  Pedigrees.R\
+\cf9 ??\cf0  R_materials/\
+\cf9 ??\cf0  SEM_allelic_richness.R\
+\cf9 ??\cf0  SEM_scripts.R\
+\cf9 ??\cf0  midterm.R\
+\cf9 ??\cf0  niche overlap2 copy.R\
+\cf9 ??\cf0  niche overlap2.R\
+\cf9 ??\cf0  shapefile map_MS thesis copy.R\
+\cf9 ??\cf0  shapefile map_MS thesis.R\
+\cf5 \
+### In the series of code below, I have made the \'93Assignment_3\'94 folder within a directory on my Desktop tractable by git.\
+\
+\cf0 Boltes-MacBook-Pro:DataScience_R bolte$ cd DataScience_Rproject/\
+\
+Boltes-MacBook-Pro:DataScience_Rproject bolte$ ls\
+\cf5 Assignment_2			DataScience_Rproject.Rproj\
+Assignment_2.zip		archaea-dna 2\
+Assignment_3			archaea-dna.zip\
+Assignment_4			carpentry_rubric(1).pdf\
+Assignment_5			forloops\
+Assignment_6			processingrawdatascript.R\
+Assignment_6.Rproj		shrub-dimensions-labeled.csv\
+\
+\
+\cf0 Boltes-MacBook-Pro:DataScience_Rproject bolte$ cd Assignment_3\
+\
+Boltes-MacBook-Pro:Assignment_3 bolte$ git init\
+\cf5 Initialized empty Git repository in /Users/bolte/Desktop/DataScience_R/DataScience_Rproject/Assignment_3/.git/\cf0 \
+\
+\
+Boltes-MacBook-Pro:Assignment_3 bolte$ git add Assignment_3.R\
+\
+\
+Boltes-MacBook-Pro:Assignment_3 bolte$ git commit -m 'initial project version'\
+\cf5 [master (root-commit) 5dac163] initial project version\
+ 1 file changed, 122 insertions(+)\
+ create mode 100644 Assignment_3.R\cf0 \
+\
+Boltes-MacBook-Pro:Assignment_3 bolte$ git clone https://github.com/boltece/Data_Sci_VCU\
+\cf5 Cloning into 'Data_Sci_VCU'...\
+remote: Enumerating objects: 21, done.\
+remote: Counting objects: 100% (21/21), done.\
+remote: Compressing objects: 100% (18/18), done.\
+remote: Total 21 (delta 7), reused 11 (delta 2), pack-reused 0\
+Unpacking objects: 100% (21/21), done.\
+Checking connectivity... done.\
+\cf0 \
+\cf7 #Now open a finder window and go to the directory where the repository was cloned\
+\
+\cf0 Boltes-MacBook-Pro:Assignment_3 bolte$ git status\
+\cf5 On branch master\
+Untracked files:\
+  (use "git add <file>..." to include in what will be committed)\
+\
+\cf0 	\cf9 .DS_Store\cf0 \
+	\cf9 .RData\cf0 \
+	\cf9 .Rhistory\cf0 \
+	\cf9 .Rproj.user/\cf0 \
+	\cf9 Assignment_3.Rproj\cf0 \
+	\cf9 Assignment_3_submission.zip\cf0 \
+	\cf9 Assignment_3_submission/\cf0 \
+	\cf9 Data_Sci_VCU/\cf0 \
+	\cf9 data/\cf0 \
+	\cf9 portaltabulardatacode.R\cf0 \
+\
+\cf5 nothing added to commit but untracked files present (use "git add" to track)\cf0 \
+\
+Boltes-MacBook-Pro:Assignment_3 bolte$ git add README.rtf\
+\
+Boltes-MacBook-Pro:Assignment_3 bolte$ ls\
+\cf5 Assignment_3.R			code\
+Assignment_3.Rproj		data\
+Assignment_3_submission		manuscript\
+Assignment_3_submission.zip	output\
+Data_Sci_VCU			portaltabulardatacode.R\
+README.rtf\
+Boltes-MacBook-Pro:Assignment_3 bolte$ git status\
+On branch master\
+Changes to be committed:\
+  (use "git reset HEAD <file>..." to unstage)\
+\cf0 \
+	\cf10 new file:   README.rtf\cf0 \
+\
+\cf5 Untracked files:\
+  (use "git add <file>..." to include in what will be committed)\cf0 \
+\
+	\cf9 .DS_Store\cf0 \
+	\cf9 .RData\cf0 \
+	\cf9 .Rhistory\cf0 \
+	\cf9 .Rproj.user/\cf0 \
+	\cf9 Assignment_3.Rproj\cf0 \
+	\cf9 Assignment_3_submission.zip\cf0 \
+	\cf9 Assignment_3_submission/\cf0 \
+	\cf9 Data_Sci_VCU/\cf0 \
+	\cf9 data/\cf0 \
+	\cf9 portaltabulardatacode.R\cf0 \
+\
+Boltes-MacBook-Pro:Assignment_3 bolte$ git add README.rtf\
+\
+Boltes-MacBook-Pro:Assignment_3 bolte$ git status\
+\cf4 On branch master\
+Changes to be committed:\
+  (use "git reset HEAD <file>..." to unstage)\cf0 \
+\
+	\cf10 new file:   README.rtf\cf0 \
+\
+\cf4 Untracked files:\
+  (use "git add <file>..." to include in what will be committed)\cf0 \
+\
+	\cf9 .DS_Store\cf0 \
+	\cf9 .RData\cf0 \
+	\cf9 .Rhistory\cf0 \
+	\cf9 .Rproj.user/\cf0 \
+	\cf9 Assignment_3.Rproj\cf0 \
+	\cf9 Assignment_3_submission.zip\cf0 \
+	\cf9 Assignment_3_submission/\cf0 \
+	\cf9 Data_Sci_VCU/\cf0 \
+	\cf9 data/\cf0 \
+	\cf9 portaltabulardatacode.R\cf0 \
+\
+Boltes-MacBook-Pro:Assignment_3 bolte$ git status\
+\cf4 On branch master\
+Changes to be committed:\
+  (use "git reset HEAD <file>..." to unstage)\cf0 \
+\
+	\cf10 new file:   README.rtf\cf0 \
+\cf5 \
+Changes not staged for commit:\
+  (use "git add <file>..." to update what will be committed)\
+  (use "git checkout -- <file>..." to discard changes in working directory)\
+\cf0 \
+	\cf9 modified:   README.rtf\cf0 \
+\
+Untracked files:\
+  (use "git add <file>..." to include in what will be committed)\
+\
+	\cf9 .DS_Store\cf0 \
+	\cf9 .RData\cf0 \
+	\cf9 .Rhistory\cf0 \
+	\cf9 .Rproj.user/\cf0 \
+	\cf9 Assignment_3.Rproj\cf0 \
+	\cf9 Assignment_3_submission.zip\cf0 \
+	\cf9 Assignment_3_submission/\cf0 \
+	\cf9 Data_Sci_VCU/\cf0 \
+	\cf9 data/\cf0 \
+	\cf9 portaltabulardatacode.R\cf0 \
+\
+Boltes-MacBook-Pro:Assignment_3 bolte$ git add README.rtf \
+Boltes-MacBook-Pro:Assignment_3 bolte$ git status\
+On branch master\
+Changes to be committed:\
+  (use "git reset HEAD <file>..." to unstage)\
+\
+	\cf10 new file:   README.rtf\cf0 \
+\
+Untracked files:\
+  (use "git add <file>..." to include in what will be committed)\
+\
+	\cf9 .DS_Store\cf0 \
+	\cf9 .RData\cf0 \
+	\cf9 .Rhistory\cf0 \
+	\cf9 .Rproj.user/\cf0 \
+	\cf9 Assignment_3.Rproj\cf0 \
+	\cf9 Assignment_3_submission.zip\cf0 \
+	\cf9 Assignment_3_submission/\cf0 \
+	\cf9 Data_Sci_VCU/\cf0 \
+	\cf9 data/\cf0 \
+	\cf9 portaltabulardatacode.R\cf0 \
+\
+Boltes-MacBook-Pro:Assignment_3 bolte$ vim README.rtf \
+\
+Boltes-MacBook-Pro:Assignment_3 bolte$ git status -s\
+\cf10 A\cf0   README.rtf\
+\cf9 ??\cf0  .DS_Store\
+\cf9 ??\cf0  .RData\
+\cf9 ??\cf0  .Rhistory\
+\cf9 ??\cf0  .Rproj.user/\
+\cf9 ??\cf0  Assignment for Markdown.docx\
+\cf9 ??\cf0  Assignment_3.Rproj\
+\cf9 ??\cf0  Assignment_3_submission.zip\
+\cf9 ??\cf0  Assignment_3_submission/\
+\cf9 ??\cf0  Data_Sci_VCU/\
+\cf9 ??\cf0  data/\
+\cf9 ??\cf0  portaltabulardatacode.R\
+\
+Boltes-MacBook-Pro:Assignment_3 bolte$ git add portaltabulardatacode.R \
+\
+Boltes-MacBook-Pro:Assignment_3 bolte$ git status -s\
+\cf10 A\cf0   README.rtf\
+\cf10 A\cf0   portaltabulardatacode.R\
+\cf9 ??\cf0  .DS_Store\
+\cf9 ??\cf0  .RData\
+\cf9 ??\cf0  .Rhistory\
+\cf9 ??\cf0  .Rproj.user/\
+\cf9 ??\cf0  Assignment for Markdown.docx\
+\cf9 ??\cf0  Assignment_3.Rproj\
+\cf9 ??\cf0  Assignment_3_submission.zip\
+\cf9 ??\cf0  Assignment_3_submission/\
+\cf9 ??\cf0  Data_Sci_VCU/\
+\cf9 ??\cf0  data/\
+\
+Boltes-MacBook-Pro:Assignment_3 bolte$ vim README.rtf \
+\
+Boltes-MacBook-Pro:Assignment_3 bolte$ git status -s\
+\cf10 A\cf9 M\cf0  README.rtf\
+\cf10 A\cf0   portaltabulardatacode.R\
+\cf9 ??\cf0  .DS_Store\
+\cf9 ??\cf0  .RData\
+\cf9 ??\cf0  .Rhistory\
+\cf9 ??\cf0  .Rproj.user/\
+\cf9 ??\cf0  Assignment for Markdown.docx\
+\cf9 ??\cf0  Assignment_3.Rproj\
+\cf9 ??\cf0  Assignment_3_submission.zip\
+\cf9 ??\cf0  Assignment_3_submission/\
+\cf9 ??\cf0  Data_Sci_VCU/\
+\cf9 ??\cf0  data/\
+\
+Boltes-MacBook-Pro:Assignment_3 bolte$ git commit README.rtf \
+[\cf5 master 78efd5c] After typing the script 'git commit README.rtf' I HAVE to type a message explaining the modification to the file or else the commit will be aborted\
+ 1 file changed, 13 insertions(+)\
+ create mode 100644 README.rtf\
+\cf0 \
+Boltes-MacBook-Pro:Assignment_3 bolte$ git status -s\
+\cf10 A\cf0   portaltabulardatacode.R\
+\cf9 ??\cf0  .DS_Store\
+\cf9 ??\cf0  .RData\
+\cf9 ??\cf0  .Rhistory\
+\cf9 ??\cf0  .Rproj.user/\
+\cf9 ??\cf0  Assignment for Markdown.docx\
+\cf9 ??\cf0  Assignment_3.Rproj\
+\cf9 ??\cf0  Assignment_3_submission.zip\
+\cf9 ??\cf0  Assignment_3_submission/\
+\cf9 ??\cf0  Data_Sci_VCU/\
+\cf9 ??\cf0  data/\
+\
+Boltes-MacBook-Pro:Assignment_3 bolte$ git add README.rtf \
+\
+Boltes-MacBook-Pro:Assignment_3 bolte$ git status -s\
+\cf10 A\cf0   portaltabulardatacode.R\
+\cf9 ??\cf0  .DS_Store\
+\cf9 ??\cf0  .RData\
+\cf9 ??\cf0  .Rhistory\
+\cf9 ??\cf0  .Rproj.user/\
+\cf9 ??\cf0  Assignment for Markdown.docx\
+\cf9 ??\cf0  Assignment_3.Rproj\
+\cf9 ??\cf0  Assignment_3_submission.zip\
+\cf9 ??\cf0  Assignment_3_submission/\
+\cf9 ??\cf0  Data_Sci_VCU/\
+\cf9 ??\cf0  data/\
+Boltes-MacBook-Pro:Assignment_3 bolte$ vim README.rtf \
+\
+Boltes-MacBook-Pro:Assignment_3 bolte$ ls\
+Assignment for Markdown.docx	README.rtf\
+Assignment_3.R			code\
+Assignment_3.Rproj		data\
+Assignment_3_submission		manuscript\
+Assignment_3_submission.zip	output\
+Data_Sci_VCU			portaltabulardatacode.R\
+Boltes-MacBook-Pro:Assignment_3 bolte$ git add README.rtf \
+Boltes-MacBook-Pro:Assignment_3 bolte$ vim README.rtf \
+Boltes-MacBook-Pro:Assignment_3 bolte$ git commit README.rtf \
+[master fef92fc]  I have to type a message explaining what was changed in this file before committing or else the commit will be aborted\
+ 1 file changed, 3 insertions(+)\
+Boltes-MacBook-Pro:Assignment_3 bolte$ cat README.rtf \
+\{\\rtf1\\ansi\\ansicpg1252\\cocoartf1404\\cocoasubrtf470\
+\{\\fonttbl\\f0\\fswiss\\fcharset0 Helvetica;\}\
+\{\\colortbl;\\red255\\green255\\blue255;\}\
+\\margl1440\\margr1440\\vieww10800\\viewh8400\\viewkind0\
+\\pard\\tx720\\tx1440\\tx2160\\tx2880\\tx3600\\tx4320\\tx5040\\tx5760\\tx6480\\tx7200\\tx7920\\tx8640\\pardirnatural\\partightenfactor0\
+\
+\\f0\\fs24 \\cf0 This was created as an example for Data Science class at VCU 2018. Lesson- Git and GitHub (11/21/18 at 8:15am)\\\
+\\\
+I am now modifying this file so git on command line will recognize a change (11/21/18 at 8:25am)\\\
+\\\
+\\\
+\} This time my modifications to this file are being done in command line. I ran vim README.rtf then pressed i to insert this message. Now I will save changes by pressing esc the :wq \
+(11/21/18 8:39am)\
+\
+\
+This particular message is being added through command line. To view and edit this file my code was vim README.rtf, then I pressed i, wrote this message, then I will press esc :wq to save my changes\
+Boltes-MacBook-Pro:Assignment_3 bolte$ git diff --staged\
+
+\f1\b diff --git a/portaltabulardatacode.R b/portaltabulardatacode.R
+\f0\b0 \
+
+\f1\b new file mode 100644
+\f0\b0 \
+
+\f1\b index 0000000..191553e
+\f0\b0 \
+
+\f1\b --- /dev/null
+\f0\b0 \
+
+\f1\b +++ b/portaltabulardatacode.R
+\f0\b0 \
+\cf12 @@ -0,0 +1,57 @@\cf0 \
+\cf10 +# working with portal\cf0 \
+\cf10 +\cf0 \
+\cf10 +surveys <- read.csv("data/surveys.csv")\cf0 \
+\cf10 +species <- read.csv("data/species.csv")\cf0 \
+\cf10 +plots <- read.csv("data/plots.csv")\cf0 \
+\cf10 +\cf0 \
+\cf10 +install.packages("dplyr")\cf0 \
+\cf10 +library(dplyr)\cf0 \
+\cf10 +\cf0 \
+\cf10 +datacollected <- select(surveys, year, month, day)\cf0 \
+\cf10 +\cf0 \
+\cf10 +filter(surveys, species_id == "DS")\cf0 \
+\cf10 +\cf0 \
+\cf10 +filter(surveys, species_id == "DS", year > 1995)\cf0 \
+\cf10 +\cf0 \
+\cf10 +a <- filter(surveys, species_id =="DS" | species_id == "DM")\cf0 \
+\cf10 +View (a)\cf0 \
+\cf10 +\cf0 \cb13  \cb1 \
+\cf10 +cm <- mutate(surveys, hindfoot_length_cm = hindfoot_length/10)\cf0 \
+\cf10 +\cf0 \
+\cf10 +\cf0 \
+Boltes-MacBook-Pro:Assignment_3 bolte$ git status -s\
+\cf10 A\cf0   portaltabulardatacode.R\
+\cf9 ??\cf0  .DS_Store\
+\cf9 ??\cf0  .RData\
+\cf9 ??\cf0  .Rhistory\
+\cf9 ??\cf0  .Rproj.user/\
+\cf9 ??\cf0  Assignment for Markdown.docx\
+\cf9 ??\cf0  Assignment_3.Rproj\
+\cf9 ??\cf0  Assignment_3_submission.zip\
+\cf9 ??\cf0  Assignment_3_submission/\
+\cf9 ??\cf0  Data_Sci_VCU/\
+\cf9 ??\cf0  data/\
+\
+Boltes-MacBook-Pro:Assignment_3 bolte$ git log\
+\cf11 commit fef92fcb0cd09a89dfd1d07836d58fabe14950de\cf0 \
+Author: Connie Bolte <boltece@vcu.edu>\
+Date:   Wed Nov 21 08:47:45 2018 -0500\
+\
+     I have to type a message explaining what was changed in this file before committing or else the commit will be aborted\
+\
+\cf11 commit 78efd5c6ac9ce6a8a4ca845d8e08f3343d32172b\cf0 \
+Author: Connie Bolte <boltece@vcu.edu>\
+Date:   Wed Nov 21 08:40:47 2018 -0500\
+\
+    After typing the script 'git commit README.rtf' I HAVE to type a message explaining the modification to the file or else the commit will be aborted\
+\
+\cf11 commit 5dac16340b88a2248d87667526e6f871a139188f\cf0 \
+Author: Connie Bolte <boltece@vcu.edu>\
+Date:   Wed Nov 21 08:13:35 2018 -0500\
+\
+    initial project version\
+\
+Boltes-MacBook-Pro:Assignment_3 bolte$ cd .git\
+\
+Boltes-MacBook-Pro:.git bolte$ ls\
+COMMIT_EDITMSG	config		index		objects\
+HEAD		description	info		refs\
+branches	hooks		logs\
+\
+Boltes-MacBook-Pro:.git bolte$ less COMMIT_EDITMSG \
+\
+Boltes-MacBook-Pro:.git bolte$ cd branches/\
+\
+Boltes-MacBook-Pro:branches bolte$ ls\
+\
+Boltes-MacBook-Pro:branches bolte$ cd ..\
+\
+Boltes-MacBook-Pro:.git bolte$ cd ..\
+\
+Boltes-MacBook-Pro:Assignment_3 bolte$ git diff --staged\
+
+\f1\b diff --git a/portaltabulardatacode.R b/portaltabulardatacode.R
+\f0\b0 \
+
+\f1\b new file mode 100644
+\f0\b0 \
+
+\f1\b index 0000000..191553e
+\f0\b0 \
+
+\f1\b --- /dev/null
+\f0\b0 \
+
+\f1\b +++ b/portaltabulardatacode.R
+\f0\b0 \
+\cf12 @@ -0,0 +1,57 @@\cf0 \
+\cf10 +# working with portal\cf0 \
+\cf10 +\cf0 \
+\cf10 +surveys <- read.csv("data/surveys.csv")\cf0 \
+\cf10 +species <- read.csv("data/species.csv")\cf0 \
+\cf10 +plots <- read.csv("data/plots.csv")\cf0 \
+\cf10 +\cf0 \
+\cf10 +install.packages("dplyr")\cf0 \
+\cf10 +library(dplyr)\cf0 \
+\cf10 +\cf0 \
+\cf10 +datacollected <- select(surveys, year, month, day)\cf0 \
+\cf10 +\cf0 \
+\cf10 +filter(surveys, species_id == "DS")\cf0 \
+\cf10 +\cf0 \
+\cf10 +filter(surveys, species_id == "DS", year > 1995)\cf0 \
+\cf10 +\cf0 \
+\cf10 +a <- filter(surveys, species_id =="DS" | species_id == "DM")\cf0 \
+\cf10 +View (a)\cf0 \
+\cf10 +\cf0 \cb13  \cb1 \
+\cf10 +cm <- mutate(surveys, hindfoot_length_cm = hindfoot_length/10)\cf0 \
+\cf10 +\cf0 \
+\
+Boltes-MacBook-Pro:Assignment_3 bolte$ git status\
+On branch master\
+Changes to be committed:\
+  (use "git reset HEAD <file>..." to unstage)\
+\
+	\cf10 new file:   portaltabulardatacode.R\cf0 \
+\
+Untracked files:\
+  (use "git add <file>..." to include in what will be committed)\
+\
+	\cf9 .DS_Store\cf0 \
+	\cf9 .RData\cf0 \
+	\cf9 .Rhistory\cf0 \
+	\cf9 .Rproj.user/\cf0 \
+	\cf9 Assignment for Markdown.docx\cf0 \
+	\cf9 Assignment_3.Rproj\cf0 \
+	\cf9 Assignment_3_submission.zip\cf0 \
+	\cf9 Assignment_3_submission/\cf0 \
+	\cf9 Data_Sci_VCU/\cf0 \
+	\cf9 data/\cf0 \
+\
+Boltes-MacBook-Pro:Assignment_3 bolte$ vim README.rtf \
+\
+\cf14 #Create a shell file (.sh) to help execute a command or series of commands\
+\cf0 \
+Boltes-MacBook-Pro:Assignment_3 bolte$ cd ~/Documents/GitHub/\
+\
+Boltes-MacBook-Pro:GitHub bolte$ vi create_shell2.sh \
+									\cf14 #press i to insert text, 									#then esc :wq to save it and exit\cf0 \
+\
+Boltes-MacBook-Pro:GitHub bolte$ chmod +x create_shell2.sh\
+Boltes-MacBook-Pro:GitHub bolte$ ./create_shell2.sh \
+\cf14 \
+#Check to see if command in .sh file was executed\cf0 \
+\
+\cf14 #Create a Markdown file from scratch \cf0 \
+Boltes-MacBook-Pro:GitHub bolte$ vi README.md\
+\
+\cf14 #Edit an existing file \cf0 \
+Boltes-MacBook-Pro:Desktop bolte$ vi bcpa_movement_package.R \
+\
+\cf14 #Check git status -s\cf0 \
+Boltes-MacBook-Pro:Desktop bolte$ cd ..\
+\
+Boltes-MacBook-Pro:GitHub bolte$ ls\
+\cf5 Data_Sci_VCU				Terminal Saved Output_git_install_setup\
+Git_lessonTEMPLATE.rtf			create_shell.rtf\
+Introduction to Git.docx		create_shell2.sh\
+README.md\
+\cf0 \
+Boltes-MacBook-Pro:GitHub bolte$ cd Data_Sci_VCU/\
+\
+Boltes-MacBook-Pro:Data_Sci_VCU bolte$ ls\
+\cf5 Assignment_4.Rproj		Program_fundamentals_part1.R	RastersandVectors.R\
+FunctionsANDconditions.R	README.md\
+\cf0 \
+Boltes-MacBook-Pro:Data_Sci_VCU bolte$ git status\
+\cf5 On branch Rasters_edited\
+Your branch is behind 'origin/Rasters_edited' by 3 commits, and can be fast-forwarded.\
+  (use "git pull" to update your local branch)\
+nothing to commit, working directory clean\
+\cf0 \
+Boltes-MacBook-Pro:Data_Sci_VCU bolte$ cd ..\
+Boltes-MacBook-Pro:GitHub bolte$ cd ..\
+Boltes-MacBook-Pro:Documents bolte$ cd ..\
+\
+\
+Boltes-MacBook-Pro:~ bolte$ cd Desktop/DataScience_R/DataScience_Rproject/Assignment_3/\
+Boltes-MacBook-Pro:Assignment_3 bolte$ git status\
+\cf5 On branch master\
+Changes to be committed:\
+  (use "git reset HEAD <file>..." to unstage)\cf0 \
+\
+	\cf10 new file:   portaltabulardatacode.R\cf0 \
+\cf5 \
+Untracked files:\
+  (use "git add <file>..." to include in what will be committed)\cf0 \
+\
+	\cf9 .DS_Store\cf0 \
+	\cf9 .RData\cf0 \
+	\cf9 .Rhistory\cf0 \
+	\cf9 .Rproj.user/\cf0 \
+	\cf9 Assignment for Markdown.docx\cf0 \
+	\cf9 Assignment_3.Rproj\cf0 \
+	\cf9 Assignment_3_submission.zip\cf0 \
+	\cf9 Assignment_3_submission/\cf0 \
+	\cf9 Data_Sci_VCU/\cf0 \
+	\cf9 data/\cf0 \
+\
+Boltes-MacBook-Pro:Assignment_3 bolte$ cd Data_Sci_VCU/\
+\
+Boltes-MacBook-Pro:Data_Sci_VCU bolte$ git status\
+\cf5 On branch Rasters_edited\
+Your branch is up-to-date with 'origin/Rasters_edited'.\
+nothing to commit, working directory clean\cf0 \
+\
+Boltes-MacBook-Pro:Data_Sci_VCU bolte$ ls\
+\cf4 FunctionsANDconditions.R	README.md\
+Program_fundamentals_part1.R	RastersandVectors.R\
+\cf0 \
+\cf15 # In the code below you are asking to view, insert, modify (vim) the README.md file in your current directory. Remember that you need to press i to insert or modify then once finished press esc :wq and then press enter.\cf0 \
+Boltes-MacBook-Pro:Data_Sci_VCU bolte$ vim README.md\
+\
+\cf15 #It is important to remember what you are editing, in this case I was editing on \'93Branch Rasters_edited\'85see output below\cf0 \
+\
+Boltes-MacBook-Pro:Data_Sci_VCU bolte$ git status\
+\cf5 On branch Rasters_edited\
+Your branch is up-to-date with 'origin/Rasters_edited'.\
+Changes not staged for commit:\
+  (use "git add <file>..." to update what will be committed)\
+  (use "git checkout -- <file>..." to discard changes in working directory)\cf0 \
+	\
+	\cf15 #Also in the output of git status here if shows you what was modified in the 		Data_Sci_VCU folder of the Rasters_edited branch\cf0 \
+	\cf9 modified:   README.md\cf0 \
+\
+	\cf15 #And even more, the output prompts you to add or add/commit all at once if 		you are satisfied with the changes you made\
+\cf5 no changes added to commit (use "git add" and/or "git commit -a")\cf0 \
+\
+Boltes-MacBook-Pro:Data_Sci_VCU bolte$ git commit -a\
+\cf5 [Rasters_edited 00dc5fd] I plan to push these changes to my online respository\
+ 1 file changed, 2 insertions(+)\
+\cf0 \
+\cf15 #I am ready to share my changes with the world! \cf0 \
+\
+Boltes-MacBook-Pro:Data_Sci_VCU bolte$ git push origin Rasters_edited\
+\cf4 Username for 'https://github.com':\cf0  boltece@vcu.edu\
+\cf4 Password for 'https://boltece@vcu.edu@github.com': \cf0 \
+\cf4 Counting objects: 3, done.\
+Delta compression using up to 2 threads.\
+Compressing objects: 100% (2/2), done.\
+Writing objects: 100% (3/3), 328 bytes | 0 bytes/s, done.\
+Total 3 (delta 1), reused 0 (delta 0)\
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.\
+To https://github.com/boltece/Data_Sci_VCU\
+   b8af6df..00dc5fd  Rasters_edited -> Rasters_edited\
+\
+\cf16 # Now check your online repository\
+\cf0 \
+Boltes-MacBook-Pro:Data_Sci_VCU bolte$ \
+\
+}
