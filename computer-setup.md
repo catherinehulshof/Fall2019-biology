@@ -20,6 +20,8 @@ Download and install [Mozilla Firefox](https://www.mozilla.org/en-US/firefox/new
 
 Download and install the [R base system](http://cran.rstudio.com/). I recommend you use the [R studio](http://www.rstudio.com/products/rstudio/download/) to work with the base system.
 
+*NOTE Depending on our schedule we may or may not cover Git*
+
 ### GitHub
 
 1. Create an account on GitHub (https://github.com) using the `Sign up for
@@ -36,7 +38,6 @@ Download and install the [R base system](http://cran.rstudio.com/). I recommend 
 
 ### Git
 
-*NOTE Depending on our schedule we may or may not cover Git*
 
 #### Windows
 

@@ -3,13 +3,13 @@ layout: page
 title: Syllabus
 catalog: BIOL 691
 credits: 3
-semester: Fall 2018
+semester: Fall 2019
 professor: Dr. Catherine Hulshof
 office: LFSCB 349
 email: cmhulshof@vcu.edu
-schedule: ['Wednesdays, 3:30 - 6:20']
+schedule: ['Wednesdays, 9:00 - 12:00']
 location: LFSCB 235
-office_hours: Thursdays 1:00 - 2:00
+office_hours: Thursdays 11:00 - 12:00
 office_hours_location: LFSCB 349
 ---
 
@@ -58,7 +58,7 @@ periodically for updates.
 
 Email: [{{ page.email }}](mailto:{{ page.email }})
 
-We will also use Blackboard to submit assignments and for other course announcements and communications. 
+We will also use Blackboard to submit assignments and for other course announcements and communications.
 
 
 ### Required Texts
