@@ -11,8 +11,8 @@ permalink:        pretty
 # Setup
 title:            Data Science for Biologists
 description:      'Preparing Biologists for the Data Era'
-url:              https://catherinehulshof.github.io/Fall2018-biology/
-baseurl:          /Fall2018-biology
+url:              https://catherinehulshof.github.io/Fall2019-biology/
+baseurl:          /Fall2019-biology
 email:            cmhulshof@vcu.edu
 feedbackurl:      https://goo.gl/forms/hP96B5qy1qQhEQH02
 author:
@@ -20,7 +20,7 @@ author:
   url:            https://catherinehulshof.wordpress.com/
 
 github:
-  repo:           https://github.com/catherinehulshof/Fall2018-biology
+  repo:           https://github.com/catherinehulshof/Fall2019-biology
   #               Be sure the 'Issues' feature is activated in 'Settings'
 
 theme: jekyll-theme-slate
