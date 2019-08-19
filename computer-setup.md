@@ -20,8 +20,9 @@ Download and install [Mozilla Firefox](https://www.mozilla.org/en-US/firefox/new
 
 Download and install the [R base system](http://cran.rstudio.com/). I recommend you use the [R studio](http://www.rstudio.com/products/rstudio/download/) to work with the base system.
 
-*NOTE Depending on our schedule we may or may not cover Git*
 
+***NOTE: Depending on our schedule we may or may not cover Git and GitHub. If we do I will include set-up instructions here.***
+<!--
 ### GitHub
 
 1. Create an account on GitHub (https://github.com) using the `Sign up for
@@ -34,7 +35,7 @@ Download and install the [R base system](http://cran.rstudio.com/). I recommend 
     1. Go to [https://github.com](https://github.com).
     2. Sign in if necessary.
     3. In the upper left corner click on the drop down with your name.
-    4. Confirm that the name name of the course GitHub organization is present
+    4. Confirm that the name of the course GitHub organization is present
 
 ### Git
 
@@ -131,3 +132,4 @@ are no longer under active development.*
 Download and install the
 [Anaconda Scientific Python Distribution](http://continuum.io/downloads).
 I recommend you use a special editor like the [Wing Intelligent Development Environment - 101](http://wingware.com/downloads/wingide-101).
+-->
