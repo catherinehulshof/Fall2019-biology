@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Assignment Schedule
-assignments: ['Data Entry and Storage', 'Introduction to R and RStudio', 'Working with Data', 'Data Visualization', 'Working with Spatial Data', 'Programming Fundamentals 1', 'Programming Fundamentals 2', 'String Exercises', 'Putting It All Together' ,'Review', 'The Carpentries Instructional Techniques']
+assignments: ['Data Entry and Storage', 'Introduction to R and RStudio', 'Working with Data', 'Data Visualization', 'Working with Spatial Data', 'Programming Fundamentals 1', 'Programming Fundamentals 2', 'String Exercises', 'Putting It All Together' ,'Review and Challenge Exercises', 'The Carpentries Instructional Techniques']
 ---
 
 [Assignment submission & checklist]({{ site.baseurl }}/materials/turn-in-checklist)

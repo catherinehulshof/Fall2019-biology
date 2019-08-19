@@ -39,8 +39,8 @@ title: Course Introduction
 	* Due end of the day on Tuesday via Blackboard
 	* 75% of grade
 
-* Topic Lectures
-    * Designed to practice instruction techniques
+* Course project
+    * Designed to practice instruction techniques and/or emphasize a particular objective for your own research
     * Ideally related to a tool you will use in your research
     * Should include worked examples and assignment (I do, we do, you do)
     * 25% of grade (grading rubric will be provided ahead of time during class)

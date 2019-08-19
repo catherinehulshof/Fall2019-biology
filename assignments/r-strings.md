@@ -1,7 +1,7 @@
 ---
 layout: page
 element: assignment
-title: Unused String Exercises
+title: String Exercises
 language: R
 exercises: ['Print Strings', 'stringr Functions', 'Strings and Math', 'Long Strings', 'Strings from Data', 'String Data', 'Improve Your Code', 'Split Strings']
 ---
