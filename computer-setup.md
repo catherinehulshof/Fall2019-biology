@@ -22,8 +22,8 @@ Download and install the [R base system](http://cran.rstudio.com/). I recommend 
 
 
 ***NOTE: Depending on our schedule we may or may not cover Git and GitHub. If we do I will include set-up instructions here.***
-<!--
-### GitHub
+
+<!--### GitHub
 
 1. Create an account on GitHub (https://github.com) using the `Sign up for
    GitHub` form on the right side of the page.
