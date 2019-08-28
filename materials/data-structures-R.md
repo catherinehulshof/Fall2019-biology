@@ -37,7 +37,7 @@ min(density_ha)
 sum(density_ha)
 ```
 
-> Do [Bird Banding 1-4]({{ site.baseurl }}/exercises/Vectors-shrub-volume-vectors-R/).
+> Do [Bird Banding 1-4]({{ site.baseurl }}/exercises/Vectors-bird-banding-R/).
 
 ### Working with multiple vectors
 
