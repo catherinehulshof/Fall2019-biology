@@ -21,4 +21,4 @@ Submit your proposal (1 page max) that describes:
 
 Projects will ultimately include a few key reference materials, a well-commented and stylized R script, figures produced by your script, and any other relevant documentation or files.
 
-[Grading Rubric](placeholder)
+[Grading Rubric]({{ site.baseurl }}/materials/ProgProjProposalRubric.pdf)
