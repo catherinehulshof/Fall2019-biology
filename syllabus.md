@@ -9,7 +9,7 @@ office: LFSCB 349
 email: cmhulshof@vcu.edu
 schedule: ['Wednesdays, 9:00 - 11:50']
 location: LFSCB 235
-office_hours: Thursdays 11:00 - 12:00
+office_hours: Tuesday 11:00 - 12:00
 office_hours_location: LFSCB 349
 ---
 
