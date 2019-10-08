@@ -23,24 +23,6 @@ downloaded, either unzip the .zip file manually or use the `unzip` function.
 Read the [.fasta files](https://en.wikipedia.org/wiki/FASTA_format) in the unzipped
 folder into R using the [ShortRead package](http://www.bioconductor.org/packages/release/bioc/html/ShortRead.html) in Bioconductor. Start by installing [Bioconductor](http://www.bioconductor.org/install/) with the following code (this may take a
 while, so be patient):
-=======
-```
-library(ShortRead)
-library(Biostrings)
-
-reads <- readFasta("archaea-dna/A-saccharovorans.fasta")
-seq <- sread(reads)
-base_freq <- alphabetFrequency(seq)
-gc_content <- (base_freq[1, "G"] + base_freq[1, "C"]) / sum(base_freq) * 100
-```
-
-The first two lines load a [.fasta file](https://en.wikipedia.org/wiki/FASTA_format)
-using the [ShortRead package](http://www.bioconductor.org/packages/release/bioc/html/ShortRead.html)
-in Bioconductor. The second two lines determine the frequency of all of the bases in sequence and then
-calculate the GC content.
-
-Start by installing [Bioconductor](http://www.bioconductor.org/install/)
-with the following code (this may take a while, so be patient):
 
 ```
 source("https://bioconductor.org/biocLite.R")
@@ -55,15 +37,21 @@ source("https://bioconductor.org/biocLite.R")
 biocLite()
 ```
 
-Each fasta file contains one long sequence of DNA for an archaea species. The
-following code loads one sequence file, where `seq` is the variable name for the data
-file:
-
+Once Bioconductor is installed, load the libraries:
 ```
 library(ShortRead)
+library(Biostrings)
+
 reads <- readFasta("archaea-dna/A-saccharovorans.fasta")
 seq <- sread(reads)
+base_freq <- alphabetFrequency(seq)
+gc_content <- (base_freq[1, "G"] + base_freq[1, "C"]) / sum(base_freq) * 100
 ```
+
+The first two lines load a [.fasta file](https://en.wikipedia.org/wiki/FASTA_format)
+using the [ShortRead package](http://www.bioconductor.org/packages/release/bioc/html/ShortRead.html)
+in Bioconductor. The second two lines determine the frequency of all of the bases in sequence and then
+calculate the GC content.
 
 Use `list.files()`, with `full.names` set to true, to generate a list of the names
 of all the sequence files. Then create a for loop that uses the above `seq` code to
