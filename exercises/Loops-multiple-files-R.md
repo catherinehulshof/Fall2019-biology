@@ -5,7 +5,7 @@ title: Multiple Files
 language: R
 ---
 
-A colleague wants to do a comparitive analysis of the GC content (i.e., the
+A colleague wants to do a comparative analysis of the GC content (i.e., the
 percentage of bases in a DNA sequence that are either G or C) on data from the
 [PATRIC](http://www.patricbrc.org) bacterial phytogenomic database. They want to
 know the GC content of all of the bacteria in the database and have started
@@ -13,7 +13,6 @@ working initially with a handful of
 [archaea](https://en.wikipedia.org/wiki/Archaea). They know a little R and wrote
 the following code to load a single sequence and caculate it's GC content.
 
-<<<<<<< HEAD
 The same colleague wants to scale up their analysis to work on data from the [PATRIC](http://www.patricbrc.org) bacterial phytogenomic database. They want to know the GC content of all of the bacteria in the database and have started working initially
 with just a handful of [archaea](https://en.wikipedia.org/wiki/Archaea).
 
@@ -42,7 +41,6 @@ calculate the GC content.
 
 Start by installing [Bioconductor](http://www.bioconductor.org/install/)
 with the following code (this may take a while, so be patient):
->>>>>>> upstream/master
 
 ```
 source("https://bioconductor.org/biocLite.R")
@@ -67,7 +65,6 @@ reads <- readFasta("archaea-dna/A-saccharovorans.fasta")
 seq <- sread(reads)
 ```
 
-<<<<<<< HEAD
 Use `list.files()`, with `full.names` set to true, to generate a list of the names
 of all the sequence files. Then create a for loop that uses the above `seq` code to
 read in each sequence file. When this works, add to the loop a function that
@@ -77,15 +74,3 @@ capitalize the “g” and “c” strings in the `str_count` functions because 
 in these files are upper case. Once this is working, create an empty data frame to
 store the output and fill it with values from the for loop, one column with file
 names and the second column with GC contents.
-=======
-Help out your colleagues by downloading
-[the data]({{ site.baseurl }}/data/archaea-dna.zip) and looping over the files
-to determine the GC content for each file. Once downloaded, either unzip the
-.zip file manually or use the `unzip` function.
-
-Use `list.files()`, with `full.names` set to true, to generate a list of the
-names of all the sequence files. Then create a for loop that uses the above code
-to read in each sequence file and calculate it's GC content. Store the resulting
-values in a data frame with one column with file names and a second column with
-GC contents.
->>>>>>> upstream/master
