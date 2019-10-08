@@ -44,6 +44,14 @@ source("https://bioconductor.org/biocLite.R")
 biocLite()
 ```
 
+If neither of the above methods work try:
+
+```
+if (!requireNamespace("BiocManager", quietly = TRUE))
+  install.packages("BiocManager")
+BiocManager::install("ShortRead")
+```
+
 Each fasta file contains one long sequence of DNA for an archaea species. The following code loads one sequence file, where seq is the variable name for the data file:
 
 ```
