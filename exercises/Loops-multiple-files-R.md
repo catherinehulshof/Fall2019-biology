@@ -52,6 +52,6 @@ reads <- readFasta("archaea-dna/A-saccharovorans.fasta")
 seq <- sread(reads)
 ```
 
-Help out your colleagues by downloading [the data]({{ site.baseurl }}/data/archaea-dna.zip) and looping over the files to determine the GC content for each file. Once downloaded, either unzip the .zip file manually or use the ```unzip``` function.
+Help out your colleagues by downloading [the data]({{ site.baseurl }}/data/archaea-dna.zip) and looping over the files to determine the GC content for each file. Once downloaded, either unzip the .zip file manually or use the `unzip` function.
 
-Use ```list.files()```, with ```full.names``` set to true, to generate a list of the names of all the sequence files. Then create a for loop that uses the above code to read in each sequence file and calculate it’s GC content. Store the resulting values in a data frame with one column with file names and a second column with GC contents.
+Use `list.files()`, with `full.names` set to true, to generate a list of the names of all the sequence files. Then create a for loop that uses the above code to read in each sequence file and calculate it’s GC content. Store the resulting values in a data frame with one column with file names and a second column with GC contents.
