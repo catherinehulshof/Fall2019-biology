@@ -10,11 +10,11 @@ your field crew. The data are organized in two vectors. The first vector contain
 of birds banded per site. Cut and paste the vectors into your assignment and then answer the following questions by printing them to the screen.
 
 ```
-sites <- c("A1", "A2", "A3", "A4", "A5", "A6", "A7", "A8", 
-"B1", "B2", "B3", "B4", "B5", "B6", "B7", "B8", "C1", "C2", 
+sites <- c("A1", "A2", "A3", "A4", "A5", "A6", "A7", "A8",
+"B1", "B2", "B3", "B4", "B5", "B6", "B7", "B8", "C1", "C2",
 "C3", "C4", "D1", "D2", "D3", "D4", "D5", "D6")
 
-counts <- c(28, 32, 1, 0, 10, 22, 30, 19, 145, 27, 36, 25, 9, 
+counts <- c(28, 32, 1, 0, 10, 22, 30, 19, 145, 27, 36, 25, 9,
 38, 21, 12, 122, 87, 36, 3, 0, 5, 55, 62, 98, 32)
 ```
 
@@ -24,5 +24,5 @@ counts <- c(28, 32, 1, 0, 10, 22, 30, 19, 145, 27, 36, 25, 9,
 4.  What is the total number of birds counted across all sites?
 5.  What is the average number of birds seen on a site?
 6.  What is the total number of birds counted on sites with codes
-    beginning with C? *Don't just identify this sites by eye, in the
+    beginning with C? *Don't just identify sites by eye, in the
     real world there could be hundreds or thousands of sites.*

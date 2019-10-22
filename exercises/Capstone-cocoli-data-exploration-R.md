@@ -7,7 +7,7 @@ language: R
 
 Understanding the spatial distribution of ecological phenomena is central to the
 study of natural systems. A group of scientists has collected a dataset on the
-size, location, and species identify of all of the trees in a 4 ha site in
+size, location, and species identity of all of the trees in a 4 ha site in
 Panama call "Cocoli".
 
 Download the [Cocoli Data](http://ctfs.si.edu/webatlas/datasets/cocoli/cocoli.zip)
@@ -21,7 +21,7 @@ and explore the following spatial properties.
    `figures` folder in your project.
 2. [Basal area](https://en.wikipedia.org/wiki/Basal_area) is a common measure in
    forest management and ecology. It is the sum of the cross-sectional areas of
-   all of the trees occuring in some area and can be calculated as the sum of
+   all of the trees occurring in some area and can be calculated as the sum of
    0.00007854 * DBH^2 over all of the trees. To look at how basal area varies
    across the site divide the site into 100 m^2 sample regions (10 x 10 m cells)
    and determining the total basal area in each region. I.e., take all of the
