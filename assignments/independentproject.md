@@ -1,7 +1,7 @@
 ---
 layout: page
 element: assignment
-title: Independent Project
+title: Independent Project Proposal
 language: R
 ---
 
