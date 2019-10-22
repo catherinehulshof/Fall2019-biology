@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Assignment Schedule
-assignments: ['Data Entry and Storage', 'Introduction to R and RStudio', 'Working with Data', 'Data Visualization', 'Working with Spatial Data', 'Programming Fundamentals 1', 'Programming Fundamentals 2', 'Independent Project', 'Putting It All Together', 'Review and Challenge Exercises', 'Project Submission']
+assignments: ['Data Entry and Storage', 'Introduction to R and RStudio', 'Working with Data', 'Data Visualization', 'Working with Spatial Data', 'Programming Fundamentals 1', 'Programming Fundamentals 2', 'Independent Project Proposal', 'Putting It All Together', 'Review and Challenge Exercises', 'Project Submission']
 ---
 
 [Assignment submission & checklist]({{ site.baseurl }}/materials/turn-in-checklist)
