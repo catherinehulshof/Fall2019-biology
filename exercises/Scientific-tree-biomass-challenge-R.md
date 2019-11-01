@@ -5,9 +5,9 @@ title: Tree Biomass Challenge
 language: R
 ---
 
-Understanding the total amount of biomass (the total mass of all individuals) in forests is important for understanding the global carbon budget and how the earth will respond to increases in carbon dioxide emissions. 
+Understanding the total amount of biomass (the total mass of all individuals) in forests is important for understanding the global carbon budget and how the earth will respond to increases in carbon dioxide emissions.
 
-We don’t normally measure the mass of a tree, but take a measurement of the diameter or circumference of the trunk and then estimate mass using equations like M = 0.124 * D^2.53.
+We don’t normally measure the mass of a tree, but take a measurement of the diameter or circumference of the trunk and then estimate mass using equations like M = 0.124 * D^2.53 where M is measured in kg of dry (above-ground) biomass and D is in cm d.b.h. (Brown 1997). 
 
 1. Estimate total tree biomass in a 96 hectare area of the Western Ghats in India using the following steps:
 
