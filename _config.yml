@@ -20,7 +20,5 @@ author:
   url:            https://catherinehulshof.wordpress.com/
 
 github:
-  repo:           https://github.com/catherinehulshof/Fall2019-biology
+  repo:           https://github.com/catherinehulshof/Fall2020-biology
   #               Be sure the 'Issues' feature is activated in 'Settings'
-
-theme: jekyll-theme-slate
