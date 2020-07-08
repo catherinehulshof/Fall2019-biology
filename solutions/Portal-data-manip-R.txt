@@ -2,65 +2,65 @@
 > 
 > # 1.
 
-      year month day species_id
-1     1977     7  16         NL
-2     1977     7  16         NL
-3     1977     7  16         DM
-4     1977     7  16         DM
-5     1977     7  16         DM
-6     1977     7  16         PF
-7     1977     7  16         PE
-8     1977     7  16         DM
-9     1977     7  16         DM
-10    1977     7  16         PF
-11    1977     7  16         DS
-12    1977     7  16         DM
-13    1977     7  16         DM
-14    1977     7  16         DM
-15    1977     7  16         DM
-16    1977     7  16         DM
-17    1977     7  16         DS
-18    1977     7  16         PP
-19    1977     7  16         PF
-20    1977     7  17         DS
-21    1977     7  17         DM
-22    1977     7  17         NL
-23    1977     7  17         DM
-24    1977     7  17         SH
-25    1977     7  17         DM
+    year month day species_id
+1   1977     7  16         NL
+2   1977     7  16         NL
+3   1977     7  16         DM
+4   1977     7  16         DM
+5   1977     7  16         DM
+6   1977     7  16         PF
+7   1977     7  16         PE
+8   1977     7  16         DM
+9   1977     7  16         DM
+10  1977     7  16         PF
+11  1977     7  16         DS
+12  1977     7  16         DM
+13  1977     7  16         DM
+14  1977     7  16         DM
+15  1977     7  16         DM
+16  1977     7  16         DM
+17  1977     7  16         DS
+18  1977     7  16         PP
+19  1977     7  16         PF
+20  1977     7  17         DS
+21  1977     7  17         DM
+22  1977     7  17         NL
+23  1977     7  17         DM
+24  1977     7  17         SH
+25  1977     7  17         DM
 ...
- [ reached getOption("max.print") -- omitted 35299 rows ]
+[ reached 'max' / getOption("max.print") -- omitted 35299 rows ]
 
 > # 2.
 
-      year species_id wgt_kg
-63    1977         DM  0.040
-64    1977         DM  0.048
-65    1977         DM  0.029
-66    1977         DM  0.046
-67    1977         DM  0.036
-68    1977         DO  0.052
-69    1977         PF  0.008
-70    1977         OX  0.022
-71    1977         DM  0.035
-74    1977         PF  0.007
-75    1977         DM  0.022
-78    1977         PF  0.009
-79    1977         DM  0.042
-81    1977         PF  0.008
-82    1977         DM  0.041
-83    1977         DM  0.037
-84    1977         DM  0.043
-85    1977         DM  0.041
-86    1977         DM  0.040
-87    1977         PF  0.009
-88    1977         DM  0.045
-89    1977         PP  0.015
-90    1977         DM  0.029
-92    1977         DM  0.039
-93    1977         DM  0.042
+    year species_id wgt_kg
+63  1977         DM  0.040
+64  1977         DM  0.048
+65  1977         DM  0.029
+66  1977         DM  0.046
+67  1977         DM  0.036
+68  1977         DO  0.052
+69  1977         PF  0.008
+70  1977         OX  0.022
+71  1977         DM  0.035
+74  1977         PF  0.007
+75  1977         DM  0.022
+78  1977         PF  0.009
+79  1977         DM  0.042
+81  1977         PF  0.008
+82  1977         DM  0.041
+83  1977         DM  0.037
+84  1977         DM  0.043
+85  1977         DM  0.041
+86  1977         DM  0.040
+87  1977         PF  0.009
+88  1977         DM  0.045
+89  1977         PP  0.015
+90  1977         DM  0.029
+92  1977         DM  0.039
+93  1977         DM  0.042
 ...
-[ reached getOption("max.print") -- omitted 31950 rows ]
+ [ reached 'max' / getOption("max.print") -- omitted 31950 rows ]
 
 > # 3.
 
@@ -91,7 +91,7 @@
 24      14476     5  14 1988      17         SH   M              26     96
 25      14488     5  15 1988       3         SH   F              27    108
 ...
- [ reached getOption("max.print") -- omitted 36 rows ]
+ [ reached 'max' / getOption("max.print") -- omitted 36 rows ]
 
 > # 4.
 
@@ -108,12 +108,12 @@
  8 CQ            16
  9 CS             1
 10 CT             1
-# ... with 39 more rows
+# … with 39 more rows
 
 > # 5.
 
 # A tibble: 535 x 3
-# Groups:   species_id [?]
+# Groups:   species_id [49]
    species_id  year count
    <fct>      <int> <int>
  1 ""          1977    16
@@ -126,7 +126,7 @@
  8 ""          1984    30
  9 ""          1985    22
 10 ""          1986    20
-# ... with 525 more rows
+# … with 525 more rows
 
 > # 6.
 
@@ -143,4 +143,4 @@
  8  1984      48.4
  9  1985      48.0
 10  1986      49.4
-# ... with 16 more rows
+# … with 16 more rows

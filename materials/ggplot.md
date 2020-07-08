@@ -12,11 +12,13 @@ language: R
 * Very popular plotting package
 * Good plots quickly
 * Declarative - describe what you want not how to build it
-* Constrasts w/Imperative - how to build it step by step
+* Contrasts w/Imperative - how to build it step by step
+* Install `ggplot2` using `install.packages`
 
 ### Data
 
-* Data on acacia size in an experiment in Africa excluding large herbivores
+* Data on acacia size in an experiment in Kenya excluding large herbivores
+* *Download both UHURU datasets into new project*
 * Data is tab separated
 * Includes information on if the plant is dead in the HEIGHT column
 
@@ -24,58 +26,53 @@ language: R
 acacia <- read.csv("http://www.esapubs.org/archive/ecol/E095/064/ACACIA_DREPANOLOBIUM_SURVEY.txt", sep="\t", na.strings = c("dead"))
 ```
 
+* *Show data and talk through treatments, sizes, and ants*
+  
 ### Basics
 
 ```
 library(ggplot2)
 ```
 
-* [`ggplot()`](http://docs.ggplot2.org/current/ggplot.html) arguments:
-    * default dataset - what data are we working with
-    * set of mappings
-        * 'Aesthetics' from variables
-		* what columns should we use for different aspects of the plot
-    * `ggplot(data = acacia, mapping = aes(x = CIRC, y = HEIGHT))`
+* `ggplot()` creates a base ggplot object that we can then add things to
+* Like a blank canvas
+* Optional arguments for information to be shared across different components
+  of the plot including
+  * default dataset - what data are we working with
+  * set of mappings or 'Aesthetics' that describe which columns are used for
+      different aspects of the plot
 
+```r
+ggplot(data = acacia, mapping = aes(x = CIRC, y = HEIGHT))
+```
+
+* This doesn't create a figure, it's just a blank canvas and some information on
+  default values for data and mapping columns to pieces of the plot
 * Add components of figures with layers
-    * [`geom_point()`](http://docs.ggplot2.org/current/geom_point.html)
-
 * Scatter plot showing branch circumference and height
 
-```
-ggplot(acacia, aes(x = CIRC, y = HEIGHT)) +
+```r
+ggplot(data = acacia, mapping = aes(x = CIRC, y = HEIGHT)) +
   geom_point()
 ```
 
 * To change things about the layer pass arguments to the geom
 
-```
-ggplot(acacia, aes(x = CIRC, y = HEIGHT)) +
+```r
+ggplot(data = acacia, mapping = aes(x = CIRC, y = HEIGHT)) +
   geom_point(size = 3, color = "blue", alpha = 0.5)
 ```
 
-* Rescale axes
-    * [`scale_continuous()`](http://docs.ggplot2.org/current/scale_continuous.html)
-
-```
-ggplot(acacia, aes(x = CIRC, y = HEIGHT)) +
-  geom_point(size = 3, color = "blue", alpha = 0.5) +
-  scale_y_log10() +
-  scale_x_log10()
-```
-
-* Not changing the data itself, just the presentation of it
-
 * Add Labels (documentation for your graphs!)
 
-```
-ggplot(acacia, aes(x = CIRC, y = HEIGHT)) +
+```r
+ggplot(data = acacia, mapping = aes(x = CIRC, y = HEIGHT)) +
   geom_point(size = 3, color = "blue", alpha = 0.5) +
   labs(x = "Circumference [cm]", y = "Height [m]",
        title = "Acacia Survey at UHURU")
 ```
 
-> Do Tasks 1-2 in [Mass vs Metabolism]({{ site.baseurl }}/exercises/Graphing-mass-vs-metabolism-R).
+> Do Task 1 in [Acacia and ants]({{ site.baseurl }}/exercises/Graphing-acacia-ants-R).
 
 ### Grouping
 
@@ -97,9 +94,20 @@ ggplot(acacia, aes(x = CIRC, y = HEIGHT)) +
 
 * Where are all the acacia in the open plots? (eaten?)
 
-> Do Tasks 3-4 in [Mass vs Metabolism]({{ site.baseurl }}/exercises/Graphing-mass-vs-metabolism-R).
+> Do Tasks 2-3 in [Acacia and ants]({{ site.baseurl }}/exercises/Graphing-acacia-ants-R).
 
-> Assign Tasks 1-4 in [Adult vs Newborn Size]({{ site.baseurl }}/exercises/Graphing-adult-vs-newborn-size-R).
+### Rescaling axes
+
+```r
+ggplot(data = acacia, mapping = aes(x = CIRC, y = HEIGHT)) +
+  geom_point(size = 3, color = "blue", alpha = 0.5) +
+  scale_y_log10() +
+  scale_x_log10()
+```
+
+* Not changing the data itself, just the presentation of it
+
+> Assign [Mass vs Metabolism]({{ site.baseurl }}/exercises/Graphing-mass-vs-metabolism-R) and Tasks 1-4 in [Adult vs Newborn Size]({{ site.baseurl }}/exercises/Graphing-adult-vs-newborn-size-R).
 
 ### Layers
 
@@ -129,6 +137,10 @@ ggplot(acacia, aes(x = CIRC, y = HEIGHT)) +
   geom_smooth(method = "lm")
 ```
 
+* Both the `geom_point` layer and the `geom_smooth` layer use the defaults form
+  `ggplot`
+* Both use `acacia` for data and `x = CIRC, y = HEIGHT` for the aesthetic
+
 * Do this by treatment
 
 ```
@@ -137,7 +149,9 @@ ggplot(acacia, aes(x = CIRC, y = HEIGHT, color = TREATMENT)) +
   geom_smooth(method = "lm")
 ```
 
-> Do Task 5 in [Adult vs Newborn Size]({{ site.baseurl }}/exercises/Graphing-adult-vs-newborn-size-R).
+* One set of points and one model for each treatment
+
+> Do Task 4 in [Acacia and ants]({{ site.baseurl }}/exercises/Graphing-acacia-ants-R).
 
 ### Statistical transformations
 
@@ -164,51 +178,82 @@ ggplot(acacia, aes(x = TREATMENT)) +
 
 ```
 ggplot(acacia, aes(x = CIRC)) +
-  geom_histogram()
+  geom_histogram(fill = "red")
 ```
 
 * Uses `stat_bins()` for data transformation
     * Splits circumferences into bins and counts rows in each bin
-* Uses `bins` argument to split data into groups
-    * Defaults to `bins = 30`
-
-* These can be combined with all of the other `ggplot2` features we've learned
+* Set number of `bins` or `binwidth`
 
 ```
 ggplot(acacia, aes(x = CIRC)) +
-  geom_histogram(bins = 15) +
-  scale_x_log10() +
-  facet_wrap(~TREATMENT) +
-  labs(x = "Circumference", y = "Number of Individuals")
+  geom_histogram(fill = "red", bins = 15)
 ```
 
-> Do Tasks 1-2 in [Sexual Dimorphism Exploration]({{ site.baseurl }}/exercises/Graphing-sexual-dimorphism-exploration-R).
-
-### Combining different data and aesthetics
-
-* Add tree size data for context
-* Layers are plotted in the order they are added
-
 ```
-trees <- read.csv("http://www.esapubs.org/archive/ecol/E095/064/TREE_SURVEYS.txt",
-                  sep="\t", na.strings = c("dead", "missing", "MISSING", "NA"))
+ggplot(acacia, aes(x = CIRC)) +
+  geom_histogram(fill = "red", binwidth = 5)
+```
+
+* These can be combined with all of the other `ggplot2` features we've learned
+
+> Do Tasks 1-2 in [Acacia and ants histograms]({{ site.baseurl }}/exercises/Graphing-acacia-ants-histograms-R).
+
+### Changing values across layers
+
+* We can also plot data from different columns or even data frames on the same graph
+* To do this we need to better understand how layers and defaults work
+* So far we've put all of the information on data and aesthetic mapping into `ggplot()`
+
+```r
+ggplot(data = acacia, mapping = aes(x = CIRC, y = HEIGHT)) +
+  geom_point()
+```
+
+* This sets the default data frame and aesthetic, which is then used by
+  `geom_point()`
+* Alternatively instead of setting the default we could just give these values
+  directly to `geom_point()`
+
+```r
 ggplot() +
-  geom_point(data = trees, aes(x = CIRC, y = HEIGHT), color = "gray") +
-  geom_point(data = acacia, aes(x = CIRC, y = HEIGHT), color = "red") +
-  labs(x = "Circumference [cm]", y = "Height [m]")
+  geom_point(data = acacia,
+             mapping = aes(x = CIRC, y = HEIGHT,
+                           color = TREATMENT))
 ```
 
-* Each layer will default to `ggplot()` mappings unless modified
-    * So, we don't have to specify the arguments that are the same
+* We can see that this information is no longer shared with other geoms since it
+  is no longer the default
 
-```
-ggplot(mapping = aes(x = CIRC, y = HEIGHT)) +
-  geom_point(data = trees, color = "gray") +
-  geom_point(data = acacia, color = "red") +
-  labs(x = "Circumference [cm]", y = "Height [m]")
+```r
+ggplot() +
+  geom_point(data = acacia,
+             mapping = aes(x = CIRC, y = HEIGHT)) +
+                           color = TREATMENT))
+  geom_smooth()
 ```
 
-> Do Task 3 in [Sexual Dimorphism Exploration]({{ site.baseurl }}/exercises/Graphing-sexual-dimorphism-exploration-R).
+* Can use this combine different aesthetics
+* Make a single model across all treatments while still coloring points
+
+```r
+ggplot() +
+  geom_point(data = acacia,
+             mapping = aes(x = CIRC, y = HEIGHT,
+                           color = TREATMENT)) +
+  geom_smooth(data = acacia,
+              mapping = aes(x = CIRC, y = HEIGHT))
+```
+
+* `color` is only set in the aesthethic for the point layer
+* So the smooth layer is made across all x and y values
+
+* *Check if this makes sense to everyone*
+
+* This same sort of change can be used to plot different columns on the same
+  plot by changing the values of x or y
+
+> Do Task 3 in [Acacia and ants histograms]({{ site.baseurl }}/exercises/Graphing-acacia-ants-histograms-R).
 
 ### Grammar of graphics
 
@@ -216,9 +261,9 @@ ggplot(mapping = aes(x = CIRC, y = HEIGHT)) +
   * Data
   * Mapping
   * Statistical transformation
-  * Position
-* Coordinates
+  * Position (allows you to shift objects, e.g., spread out overlapping data points)
 * Facets
+* Coordinates (coordinate systems other than cartesian, also allows zooming)
 * In combination uniquely describes any plot
 
 ### Saving plots as new files
@@ -237,3 +282,36 @@ ggsave(“figures/acacia_by_treatment.pdf”, height = 5, width = 5)
 ```
 
 > Assign the rest of the exercises.
+
+
+### Combining different datasets (time allowing)
+
+* We can use this to plot data from different sources together
+* Add tree size data for context
+* Layers are plotted in the order they are added
+
+* Use the `readr` package to read in this data
+* It has a lot of issues and `readr` fixes many of them automatically
+
+```r
+library(readr)
+trees <- read_tsv("data/TREE_SURVEYS.txt")
+ggplot() +
+  geom_point(data = trees,
+             aes(x = CIRC, y = HEIGHT),
+             color = "gray") +
+  geom_point(data = acacia,
+             aes(x = CIRC, y = HEIGHT),
+             color = "red") +
+  labs(x = "Circumference [cm]", y = "Height [m]")
+```
+
+* Each layer will default to `ggplot()` mappings unless modified
+    * So, we don't have to specify the arguments that are the same
+
+```
+ggplot(mapping = aes(x = CIRC, y = HEIGHT)) +
+  geom_point(data = trees, color = "gray") +
+  geom_point(data = acacia, color = "red") +
+  labs(x = "Circumference [cm]", y = "Height [m]")
+```

@@ -80,19 +80,29 @@ select(surveys, month, day, year)
   
 ```
 filter(surveys, species_id == "DS")
-filter(surveys, species_id == "DS", year > 1995)
-```
-
-* Commas indicate `and`, use `|` for `or`.
-
-```
-filter(surveys, species_id == "DS" | species_id == "DM")
 ```
 
 * Add new columns with calculated values using `mutate()`
 
 ```
 mutate(surveys, hindfoot_length_cm = hindfoot_length / 10)
+```
+
+* If we look at `surveys` now will it contain the new column?
+* *Open `surveys`*
+* All of these commands produce new values, data frames in this case
+* To store them for later use we need to assign them to a variable
+
+```
+surveys_plus <- mutate(surveys,
+                       hindfoot_length_cm = hindfoot_length / 10)
+```
+
+* Or we could overwrite the existing variable if we don't need it
+
+```
+surveys <- mutate(surveys,
+                  hindfoot_length_cm = hindfoot_length / 10)
 ```
 
 > Do [Shrub Volume Data Basics]({{ site.baseurl }}/exercises/Dplyr-shrub-volume-data-basics-R).

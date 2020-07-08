@@ -92,6 +92,12 @@ data files and code in a more manageable way.
 #### Commit data
 
 * Download the data file [Gaeta_etal_CLC_data.csv](https://lter.limnology.wisc.edu/sites/default/files/Gaeta_etal_CLC_data.csv) to your project directory.
+* Add the data file to version control
+* Two step process:
+
+1. Add the data file (checkbox)
+2. Commit it
+
 * Git -> Select `Gaeta_etal_CLC_data.csv`.
 * Commit with message. 
     * `Add fish size and growth rate data`
@@ -158,11 +164,36 @@ fish_data_cat = fish_data %>%
         * The new version of the line is shown as added.
 
 
-> Do [Exercise 2 - First Solo Commit]({{ site.baseurl }}/exercises/Version-control-basic-first-solo-commit-R/),
-> [Exercise 3 - Second Solo Commit]({{ site.baseurl }}/exercises/Version-control-basic-second-solo-commit-R/),
-> and [Exercise 4 - Commit Multiple Files]({{ site.baseurl }}/exercises/Version-control-basic-commit-multiple-files-R/).
+> Do [Exercise 2 - First Solo Commit]({{ site.baseurl }}/exercises/Version-control-basic-first-solo-commit-R/) and
+> [Exercise 3 - Second Solo Commit]({{ site.baseurl }}/exercises/Version-control-basic-second-solo-commit-R/)
 
-> Instructor also do exercises
+> **Instructor also do exercises**
+
+
+### Committing multiple files
+
+* Commits can include multiple files at once
+* Let's move our data file into a `data` subdirectory
+* `New Folder` -> `data`
+* Checkbox `Gaeta_etal_CLC_data.csv` -> `More` -> `Move`
+* Change code to read from new subdirectory
+
+```r
+fish_data = read.csv("data/Gaeta_etal_CLC_data.csv")
+```
+
+* Changes to R script indicated by M
+* Original datafile has a red D next to it which indicates "deleted"
+* New, untracked, data directory
+* git initially thinks we've deleted `Gaeta_etal_CLC_data.csv` and created a new `Gaeta_etal_CLC_data.csv` file in a new directory.
+* Click on both the old and new files to stage them
+* git then recognizes that we have moved (or renamed) the file by making the two files into one and marking this with an `R` for "rename".
+
+* Commit: `Move data file into subdirectory`
+
+> Do [Exercise 4 - Commit Multiple Files]({{ site.baseurl }}/exercises/Version-control-basic-commit-multiple-files-R/).
+
+> **Instructor also do exercise**
 
 ### Git as a time machine
 

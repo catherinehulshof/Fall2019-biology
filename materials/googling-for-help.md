@@ -5,9 +5,9 @@ title: Googling for Help
 ---
 
 > Check that top Google results haven't change and adjust as needed
-> Current top 3 hits:
-> 1. https://blog.exploratory.io/selecting-columns-809bdd1ef615
-> 2. https://dplyr.tidyverse.org/reference/select.html
+> Current top hits 1, 2, and 5:
+> 1. https://dplyr.tidyverse.org/reference/select.html
+> 2. https://blog.exploratory.io/selecting-columns-809bdd1ef615
 > 3. https://stackoverflow.com/questions/21502465/replacement-for-rename-in-dplyr
 
 * Professional programmers use Google regularly
@@ -22,18 +22,30 @@ title: Googling for Help
 
 ### Example
 
-* How to rename columns in dplyr
-* Search: `dplyr rename column`
+* How to change the name of columns in dplyr
+* Search: `dplyr change name column`
     * Name of package (if not in a distinctly name package include `r` or
       `rstats`)
     * The thing you want to do using technical terms
     * Keep it simple
     * Sometimes first searches show you how to ask the question
+* Switch to `dplyr rename column`
 * Check the date
     * Older results might be out of date
     * Can restrict to newer posts in search (but often more advanced)
 
 #### First hit
+
+> https://dplyr.tidyverse.org/reference/select.html
+
+* Documentation
+* Start reading from top
+* Not super clear
+* Focus on examples
+* `Ctrl-F`
+* `petal_length` is in output, so it is the new name and `Petal.Length` is the old value
+
+#### Second hit
 
 > https://blog.exploratory.io/selecting-columns-809bdd1ef615
 
@@ -45,18 +57,7 @@ title: Googling for Help
 * Scroll up and look at column names
 * `assignee.login` is in the orginal setup, so that is the variable we are changing, `developer` is new name
 
-#### Second hit
-
-> https://dplyr.tidyverse.org/reference/select.html
-
-* Documentation
-* Start reading from top
-* Not super clear
-* Focus on examples
-* `Ctrl-F`
-* `petal_length` is in output, so it is the new name and `Petal.Length` is the old value
-
-#### Third hit
+#### Fifth hit
 
 > https://stackoverflow.com/questions/21502465/replacement-for-rename-in-dplyr
 

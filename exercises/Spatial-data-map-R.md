@@ -7,7 +7,10 @@ language: R
 
 A colleague of yours is working on a project on banner-tailed kangaroo rats ([*Dipodomys spectabilis*](https://animaldiversity.org/accounts/Dipodomys_spectabilis/)) and is interested in what elevations these mice tend to occupy in the continental United States. You offer to help them out by getting some coordinates for specimens of this species and looking up the elevation of these coordinates. 
 
-1. Get banner-tailed kangaroo rat occurrences from GBIF, the [Global Biodiversity Information Facility](https://www.gbif.org/), using the `spocc` R package, which is designed to retrieve species occurrence data from various openly available data resources. Use the following code to do so: 
+Start by getting banner-tailed kangaroo rat occurrences from GBIF, the [Global
+Biodiversity Information Facility](https://www.gbif.org/), using the `spocc` R
+package, which is designed to retrieve species occurrence data from various
+openly available data resources. Use the following code to do so: 
 
 	```
 	dipo_df = occ(query = "Dipodomys spectabilis", 
@@ -17,14 +20,18 @@ A colleague of yours is working on a project on banner-tailed kangaroo rats ([*D
 	dipo_df = data.frame(dipo_df$gbif$data)
 	```
 
-2. Clean up the data by:
-	* Using the `rename` function from `dplyr` to rename the second and third columns of this dataset to `longitude` and `latitude`
+1. Clean up the data by:
 	* Filter the data to only include those specimens with `Dipodomys_spectabilis.basisOfRecord` that is `PRESERVED_SPECIMEN` and a `Dipodomys_spectabilis.countryCode` that is `US`
-	* Remove points with values of `0` for `latitude` or `longitude`
-	* Remove all of the columns from the dataset except `latitude` and `longitude` using `select`
-	* Use `head()` function to show the top few rows of this cleaned dataset
+    * Remove points with values of `0` for `Dipodomys_spectabilis.latitude` or
+      `Dipodomys_spectabilis.longitude`
+    * Remove all of the columns from the dataset except
+      `Dipodomys_spectabilis.latitude` and `Dipodomys_spectabilis.longitude` and
+      rename these columns to `latitude` and `longitude` using `select`. You can
+      rename while selecting columns using a format like this one
+      `select(new_column_name = old_column_name)`
+	* Use the `head()` function to show the top few rows of this cleaned dataset
 
-3. Do the following to display the locations of these points on a map of the United States:
+2. Do the following to display the locations of these points on a map of the United States:
 	* Get data for a US map using `usmap = map_data("usa")`
 	* Plot it using `geom_polygon`. In the aesthetic use `group = group` to avoid weird lines cross your graph. Use `fill = "white"` and `color = "black"`.
 	* Plot the kangaroo rat locations

@@ -3,14 +3,14 @@ layout: page
 title: Syllabus
 catalog: BIOL 691
 credits: 3
-semester: Fall 2019
+semester: Fall 2020
 professor: Dr. Catherine Hulshof
 office: LFSCB 349
 email: cmhulshof@vcu.edu
-schedule: ['Wednesdays, 9:00 - 11:50']
-location: LFSCB 235
-office_hours: Tuesday 11:00 - 12:00
-office_hours_location: LFSCB 349
+schedule: Asynchronous
+location: The Cloud
+office_hours: TBD
+office_hours_location: The Matrix
 ---
 
 ## {{ site.title }}
@@ -83,7 +83,7 @@ programming or databases is required.
 
 ### Prerequisite Knowledge and Skills
 
-Knowledge of basic biology.
+Knowledge of basic biology to provide context for exercises.
 
 
 ### Purpose of Course
@@ -102,7 +102,7 @@ Students completing this course will be able to:
 
 * Create well structured databases
 * Extract information from databases
-* Write simple computer programs in R
+* Write computer programs in R
 * Automate data analysis
 * Apply these tools to address biological questions
 * Apply general data management and analysis concepts to other programming
@@ -159,7 +159,9 @@ if you fall behind. Reasonable requests for longer extensions will also be grant
 
 ### Assignment policy
 
-Assignments are due Tuesday night by 11:59 pm Eastern Time. This allows you to be finished with one week's material before starting the next week's material. Submit materials through our Blackboard course site.
+Assignments are due Monday night by 11:59 pm Eastern Time. Assignments should be
+submitted via Canvas. This timing allows you to be finished with one week's material
+before starting the next week's material.
 
 
 ### Course Technology

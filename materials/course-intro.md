@@ -28,6 +28,8 @@ title: Course Introduction
 * Peer instruction
     * Interact with each other during the we do and you do parts
 	* You are at least as likely to learn from your peers as from me
+    * If you already know some of the material and are getting ahead, see if
+      there's someone you can help
 	* Introduce yourself to one of your neighbors you don't know
 
 ### Course structure
@@ -36,14 +38,14 @@ title: Course Introduction
     * Practice is really important for learning skills like this
     * Work on exercises in class
 	* Will require additional programming time after class
-	* Due end of the day on Tuesday via Blackboard
-	* 75% of grade
+	* Due end of the day on Monday via Canvas
 
-* Course project
-    * Designed to practice instruction techniques and/or emphasize a particular objective for your own research
-    * Ideally related to a tool you will use in your research
-    * Should include worked examples and assignment (I do, we do, you do)
-    * 25% of grade (grading rubric will be provided ahead of time during class)
+### Expected background
+
+* Assumes no background in R or any of the other things we'll learn
+* If you're already good at R it's worth spending some time with the website
+  (which we're about to look at) to see if this a good fit for you
+* Information on more advanced options
 
 ### Website
 
@@ -61,7 +63,6 @@ title: Course Introduction
 * Assignments
     * Answers provided
 
-
 ### Syllabus
 
 * Grading
@@ -70,7 +71,12 @@ title: Course Introduction
 
 ### Office Hours
 
-* Thursdays 1 - 2 in LFSCB 349
+* TBD
+
+### Canvas
+
+* Handle assignment submission and grading through Canvas
+* Chat
 
 ### First day demo
 

@@ -15,17 +15,28 @@ language: R
     MYnameIS          ETHAN................... I_AM_36 years
                  OLD
 
-* Using the same style as others is helpful
+* Follow basic rules that make things readable
+* Using the same style consistently
+* Use the same style as others
+* Style Guide
 
 ### Whitespace
 
-* Indentation what the brain reconizes, use it regardless of language (and braces)
+* Indentation what the brain recognizes, use it regardless of language (and braces)
 * 2 space indents
 
 ```
-for (i in 1:10){
-  do_things()
-}
+stuff <- data %>%
+filter() %>%
+select()
+things <- 2
+```
+
+```
+stuff <- data %>%
+  filter() %>%
+  select()
+things <- 2
 ```
 
 * Spaces after commas and around operators
@@ -37,15 +48,9 @@ range(x, x + 10)
 ### Naming
 
 * snake_case
-
-### Documentation & Comments
-
-* Documentation
-    * How to use code
-    * Use Roxygen comments for functions
-* Comments
-    * Why & how code works
-    * Only if it code is confusing to read
+* Descriptive: `estimate_biomass`
+* Not too long: `estimate_biomass_using_hanson_method`
+* Use whole words for accessibility
 
 ### Long lines
 

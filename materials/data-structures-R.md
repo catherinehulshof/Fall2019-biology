@@ -3,7 +3,7 @@ layout: page
 element: notes
 title: Data Structures
 language: R
----
+--- 
 
 ### Vectors
 
@@ -11,18 +11,18 @@ language: R
 * Create using `c()`, which stands for "combine"
 
 ```
-sites <- c("a", "a", "b", “c”)
+sites <- c("a", "a", "b", "c")
 ```
 
-* Functions:
-    * `str(sites)`
-    * `length(sites)`
-
+* `str(sites)` 
+	
 * Slicing:
-    * `sites[1]`
+    * Use `[]`
+    * In general `[]` in R means, "give me a piece of something"
+    * `sites[1]` 
     * `sites[1:3]`
         * `1:3` makes a vector. So, this is the same as
-    * `sites[c(1, 2, 3)]`
+    * `sites[c(1, 2, 3)]` 
     * `sites[c(4, 1, 3)]`
         * You can use a vector to get any subset or order you want
 
@@ -30,6 +30,7 @@ sites <- c("a", "a", "b", “c”)
 * Math functions:
 
 ```
+length(sites)
 density_ha <- c(2.8, 3.2, 1.5, 3.8)
 mean(density_ha)
 max(density_ha)
@@ -38,6 +39,24 @@ sum(density_ha)
 ```
 
 > Do [Bird Banding 1-4]({{ site.baseurl }}/exercises/Vectors-bird-banding-R/).
+
+### Null values
+
+* So far we've worked with data with no missing values
+* How many of you have missing values in your data?
+
+```
+density_ha <- c(2.8, 3.2, 1.5, NA)
+mean(density_ha)
+```
+* Why did we get `NA`?
+    * Hard to say what a calculation including `NA` should be
+    * So most calculations return `NA` when `NA` is in the data
+* Can tell many functions to remove the `NA` before calculating
+
+```
+mean(density_ha, na.rm = TRUE)
+```
 
 ### Working with multiple vectors
 
@@ -50,24 +69,36 @@ area_ha <- c(3, 5, 1.9, 2.7)
 total_number <- density_ha * area_ha
 ```
 
-* Subsetting:
-    * `total_number[sites == 'a']`
-        * `==` means "equal to" in most languages.
-        * Not `=`. `=` is used for assignment.
-        * `!=`, `<`, `>`
+* Subsetting is done using `[]`, like slicing
 
-> Do [Shrub Volume Vectors]({{ site.baseurl }}/exercises/Vectors-shrub-volume-vectors-R/).
-
-
-### Matrices (if linear algebra folks)
-
-* A two-dimensional set of values with a single data type
-
+```r
+area[sites == 'a']
 ```
-x <- matrix(1:6, 2)
-y <- matrix(1:3, ncol = 1)
-x %*% y
+
+* `==` means "equal to" in most languages.
+* Not `=`. `=` is used for assignment.
+
+* Can also do "not equal to"
+
+```r
+area[sites != 'a']
 ```
+
+* Greater or less than
+
+```r
+sites[area_ha > 3]
+sites[area_ha >= 3]
+sites[area_ha < 3]
+```
+
+* And we can subset a vector based on itself
+
+```r
+sites[sites != 'a']
+```
+
+> Do [Shrub Volume Vectors 1-3]({{ site.baseurl }}/exercises/Vectors-shrub-volume-vectors-R/).
 
 ### Data frames
 
@@ -79,23 +110,30 @@ x %*% y
 surveys <- data.frame(sites, density_ha, area_ha)
 ```
 
-* `read.csv()`
-    * Main argument is the location of the data - url or path on computer
-    * Go to `Datasets` page on site and copy `Shrub dimensions` url
-
-```
-shrub_data <- read.csv('https://datacarpentry.org/semester-biology/data/shrub-dimensions-labeled.csv')
-```
-
-* Useful commands:
+* Useful commands: 
     * `str(surveys)`
     * `length(surveys)`
     * `nrow(surveys)`, `ncol(surveys)`
-* Subsetting columns:
+* Subsetting:
+    * [row, column]
+    * `surveys[1, 2]`
+    * `surveys[1:2, 2:3]`
+    * `surveys[, 3]`
     * `surveys[“area_ha”]`
     * `surveys[c(“area_ha”, “sites”)]`
     * `surveys$area_ha`
     * `surveys[[“area_ha”]]`
+
+
+### Reading in external data
+
+* `read.csv()`
+    * Main argument is the location of the data - url or path on computer
+    * Go to `Datasets` page on site and copy `Shrub dimensions` url
+  
+```
+shrub_data <- read.csv('https://datacarpentry.org/semester-biology/data/shrub-dimensions-labeled.csv')
+```
 
 ### Factors
 
