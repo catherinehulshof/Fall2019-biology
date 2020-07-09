@@ -5,12 +5,12 @@ catalog: BIOL 691
 credits: 3
 semester: Fall 2020
 professor: Dr. Catherine Hulshof
-office: LFSCB 349
+office: Online
 email: cmhulshof@vcu.edu
-schedule: Asynchronous
-location: The Cloud
-office_hours: TBD
-office_hours_location: The Matrix
+schedule: Asynchronous (reserve 1:00 pm - 3:50 pm	W for occasional online meetups)
+location: Online
+office_hours: Online
+office_hours_location: Online
 ---
 
 ## {{ site.title }}
@@ -26,7 +26,7 @@ Email:
 
 ### Class Location
 
-LFSCB 235
+Online
 
 ### Times
 
@@ -42,9 +42,9 @@ Location: {{ page.office_hours_location }}
 
 Or by appointment.
 
-*Note: my schedule gets very busy during the semester so
+*Note: my schedule gets busy during the semester so
 please try to schedule appointments in advance. In general it
-will be very difficult to set up appointments less than 24 hours in advance.*
+will be difficult to set up appointments less than 24 hours in advance.*
 
 ### Website
 
@@ -58,7 +58,7 @@ periodically for updates.
 
 Email: [{{ page.email }}](mailto:{{ page.email }})
 
-We will also use Blackboard to submit assignments and for other course announcements and communications.
+We will also use Canvas to submit assignments and for other course announcements and communications.
 
 
 ### Required Texts
@@ -145,7 +145,7 @@ material.
 
 ### Quiz/Exam Policy
 
-There are no quizzes or exams in this course.
+All quizzes are online, open-book, honor system.
 
 
 ### Make-up policy
@@ -184,7 +184,7 @@ and I will do my best to help.**
 
 ## Grading Policies
 
-Grading for this course is based on 10 equally weighted assignments (75%), and 1 course project (25%).
+Grading for this course is based on 14 equally weighted assignments (75%), and 14 equally weighted quizzes (25%).
 
 One problem
 from each assignment (selected at the instructors discretion after the
@@ -198,7 +198,6 @@ detailed grade. Other problems will be graded as follows:
     50%
 * Answer demonstrates a lack of understanding of the core concept: 0%
 
-The course project may focus on a core topic listed in the syllabus or another topic of interest. More details will be provided in class.
 
 ### Grading scale
 
@@ -211,7 +210,7 @@ The course project may focus on a core topic listed in the syllabus or another t
 
 ## Course Schedule
 
-The details course schedule is available on the course website at:
+The detailed course schedule is available on our course website at:
 [{{ site.url }}/schedule]({{ site.baseurl }}/schedule).
 
 
