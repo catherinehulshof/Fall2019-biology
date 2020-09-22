@@ -2,9 +2,7 @@
 layout: default
 ---
 
-This website hosts introductory material for teaching biologists how to interact
-with data including: data structure, database management systems, and
-programming for data manipulation, analysis, and visualization.
+An introduction to working with data for biologists including: data structure, data manipulation, visualization, basic programming, and databases.
 
 The course website was adapted from the [Data Carpentry for Biologists course](http://www.datacarpentry.org/semester-biology/). As for their course material, instructors are welcome to modify and use this material. Collaborative development and contributions by other instructors is encouraged with the hopes that this will lead to better training and resources for everyone.
 
@@ -35,3 +33,7 @@ For Instructors
   <i class="fa fa-magic fa-fw"></i> Exercises</a>
 : <a href="{{ site.baseurl}}/docs">
   <i class="fa fa-question-circle fa-fw"></i> Course Development Help</a>
+
+The material is designed to be modify and remixed to create your own
+courses. Collaborative development and contributions by
+are welcome.

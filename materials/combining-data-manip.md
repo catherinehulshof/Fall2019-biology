@@ -16,13 +16,12 @@ time: 30
 * Use that variable later in the code
 * Repeat
 
-* Determine the mean weight of DS in each year
+* Obtain the data for only DS, sorted by year, with only the year and and weight columns
 
 ```
-ds_data <- filter(surveys, species_id == "DS")
-ds_data_by_year <- group_by(ds_data, year)
-ds_weight_by_year <- summarize(ds_data_by_year,
-                               avg_weight = mean(weight, na.rm = TRUE))
+ds_data <- filter(surveys, species_id == "DS", !is.na(weight))
+ds_data_by_year <- arrange(ds_data, year)
+ds_weight_by_year <- select(ds_data_by_year, year, weight)
 ```
 
 > Do [Portal Data Manipulation Exercise 1-2]({{ site.baseurl }}/exercises/Portal-data-manip-R)
@@ -64,9 +63,9 @@ surveys %>%
 
 ```
 ds_weight_by_year <- surveys %>%
-  filter(species_id == "DS") %>%
-  group_by(year) %>%
-  summarize(avg_weight = mean(weight, na.rm = TRUE))
+  filter(species_id == "DS", !is.na(weight)) %>%
+  arrange(year) %>%
+  select(year, weight)
 ```
 
 * Shortcut: Ctrl-shift-m
