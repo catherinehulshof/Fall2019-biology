@@ -5,8 +5,7 @@ title: Assignment Submission & Checklist
 
 - What files to submit:
     - **Week 1** - one text file (such as a Word doc), and one .xlsx file
-    - **Week 2-3** - a zip file containing one .R file & any data files needed to run it
-    - **Week 4-10** - an .Rmd file
+    - **Week 2-9** - a zip file containing one .R file & any data files needed to run it
     - **Student chosen topics** - a zip file containing one .R file & any data files needed to run it
 - To create zip, put all files into single folder, right click folder, and select compress option
 - Submit folder through Canvas
@@ -19,7 +18,7 @@ title: Assignment Submission & Checklist
   your answers should match those provided. For example, if there are three
   separate plots your code should produce three separate plots.
 - Some errors can lead to only subtle differences so check carefully
-- Sometimes small differences result from changes in packages. If you see a
+- Sometimes small differences result in changes in packages. If you see a
   difference but you think your answer is right, let us know and we can check.
 
 #### Make sure your code follows the instructions

@@ -1,11 +1,13 @@
 ---
 layout: page
 element: assignment
-title: Data in Tables
+title: Working with Data
 language: R
-exercises: ['Shrub Volume Data Basics', 'Code Shuffle', 'Bird Banding', 'Portal Data Manipulation', 'Portal Data Manipulation Pipes', 'Portal Data Challenge']
-points: [20, 20, 20, 20, 20, optional]
+exercises: ['Shrub Volume Data Basics', 'Shrub Volume Aggregation', 'Shrub Volume Join', 'Portal Data Manipulation', 'Portal Data Manipulation Pipes', 'Fix the Code', 'Portal Data Joins']
+points: [10, 10, 15, 15, 15, 15, 20]
 ---
+
+#### Learning Objectives
 
 > Following this assignment students should be able to:
 >
@@ -14,11 +16,5 @@ points: [20, 20, 20, 20, 20, optional]
 > - execute a simple import and analyze data scenario
 
 {% include reading.html %}
-
-Place this code at the start of the assignment to load all the required packages.
-
-```r
-library(dplyr)
-```
 
 {% include assignment.html %}

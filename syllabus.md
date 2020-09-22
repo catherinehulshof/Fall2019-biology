@@ -100,8 +100,8 @@ be able to do more science faster.
 
 Students completing this course will be able to:
 
-* Create well structured data
-* Extract information from data
+* Create well structured databases
+* Extract information from databases
 * Write computer programs in R
 * Automate data analysis
 * Apply these tools to address biological questions
@@ -135,31 +135,11 @@ minute demonstrations on the concepts followed by time to work on exercises.
 
 ## Course Policies
 
-### Special Policies for 2020
-
-It has been a long, exhausting, year and it will continue to be so for many of us.
-My goal is to help you learn as much as you can, while recognizing that most people have more limitations and less energy than usual.
-
-The course is being taught online for the first time due to the pandemic.
-To provide maximum flexibility the course material can be engaged with in three ways:
-
-1. Fully synchronous: Attend class during the scheduled class periods. Follow each lesson, which combine video lectures and exercises, during the class periods and ask for help as you run into questions. This is the closest approximation to how the course normally runs in-person.
-2. Synchronous Q&A: Follow each lesson before class, watching the videos and doing the exercises you can. Stop if you get confused. Come to class during the class periods and ask for help on challenges you encountered.
-3. Asynchronous: Follow the lessons online and ask for help via Piazza. This is the least ideal approach because the course is generally based around the benefits of direct student-instructor interaction to work through misunderstandings, but we'll do our best to make it work for you.
-
-The course always has flexible deadline policies (see below) and will continue to do so to support students learning under these difficult circumstances.
-There is an automatic (no request needed) 48 hour extension on all assignments for those who need it.
-If you need more time just let me know.
-You never need to disclose personal information to me to get an extension. Just let me know how long you need.
-
-### Class Recording
-
-Our class sessions may be audio visually recorded for students in the class to refer back and for enrolled students who are unable to attend live. Students who participate with their camera engaged or utilize a profile image are agreeing to have their video or image recorded.  If you are unwilling to consent to have your profile or video image recorded, be sure to keep your camera off and do not use a profile image. Likewise, students who un-mute during class and participate orally are agreeing to have their voices recorded.  If you are not willing to consent to have your voice recorded during class, you will need to keep your mute button activated and communicate exclusively using the "chat" feature, which allows students to type questions and comments live. The chat will not be recorded or shared. As in all courses, unauthorized recording and unauthorized sharing of recorded materials is prohibited.
 
 ### Attendance Policy
 
 Attendance will not be taken or factor into the grades for this class. However,
-experience suggests that students who regularly miss class often struggle to learn the
+experience suggests that students who regularly miss class struggle to learn the
 material.
 
 
@@ -179,9 +159,10 @@ if you fall behind. Reasonable requests for longer extensions will also be grant
 
 ### Assignment policy
 
-Assignments are due Monday night by 11:59 pm Eastern Time.
-This timing allows you to be finished with one week's material before starting the next week's material.
-Assignments should be submitted via either RStudio Cloud (for R assignments) or Canvas (for other assignments).
+Assignments are due Monday night by 11:59 pm Eastern Time. Assignments should be
+submitted via Canvas. This timing allows you to be finished with one week's material
+before starting the next week's material.
+
 
 ### Course Technology
 
